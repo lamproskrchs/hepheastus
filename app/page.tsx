@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import { cn } from "@/utils/cn";
 import React from "react";
@@ -16,6 +16,8 @@ import { MacbookScroll } from "@/components/ui/macbook-scroll";
 import Link from "next/link";
 import { useScroll, useTransform } from "framer-motion";
 import { GoogleGeminiEffect } from "@/components/ui/gemini-google-effect";
+import { Spotlight } from "@/components/ui/spotlight";
+import { Button } from "@/components/ui/moving-border";
 
 export default function Home() {
   //Bendo grid
@@ -181,19 +183,56 @@ export default function Home() {
         />
       </div>
       <div
-      className="h-[400vh] w-full rounded-md relative overflow-clip"
-      ref={ref}
-    >
-      <GoogleGeminiEffect
-        pathLengths={[
-          pathLengthFirst,
-          pathLengthSecond,
-          pathLengthThird,
-          pathLengthFourth,
-          pathLengthFifth,
-        ]}
-      />
-    </div>
+        className="h-[400vh] w-full rounded-md relative overflow-clip"
+        ref={ref}
+      >
+        <GoogleGeminiEffect
+          pathLengths={[
+            pathLengthFirst,
+            pathLengthSecond,
+            pathLengthThird,
+            pathLengthFourth,
+            pathLengthFifth,
+          ]}
+        />
+      </div>
+      <div className="h-[40rem] w-full   dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center">
+        {/* Radial gradient for the container to give a faded look */}
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center  [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+        <p className="text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8">
+          3D Modeling & Building
+        </p>
+      </div>
+      <div className="h-[40rem] w-full rounded-md flex md:items-center md:justify-center antialiased bg-grid-white/[0.02] relative overflow-hidden">
+        <Spotlight
+          className="-top-40 left-0 md:left-60 md:-top-20"
+          fill="white"
+        />
+        <div className=" p-4 max-w-7xl space-y-8  mx-auto relative z-10  w-full pt-20 md:pt-0">
+          <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+            And much more <br /> awaiting for you in the team.
+          </h1>
+          <p className="mt-4 font-normal text-base text-neutral-300 max-w-lg text-center mx-auto">
+            Spotlight effect is a great way to draw attention to a specific part
+            of the page. Here, we are drawing the attention towards the text
+            section of the page. I don&apos;t know why but I&apos;m running out
+            of copy.
+          </p>
+          <div className="flex flex-row w-full items-center justify-center">
+            <Button
+              borderRadius="1.75rem"
+              className="mx-auto  text-black dark:text-white border-neutral-200 dark:border-slate-800"
+            >
+              Become a member
+            </Button>{" "}
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col pt-[100px] pb-[10px] space-y-7 items-center text-white text-lg ">
+          <div className="flex flex-row w-[200px] h-[5px] rounded-full bg-white shadow-2xl shadow-white"></div>
+          <p>This site is open source ! You can find on <a className=" text-gray-400" href="#">Github</a></p>
+          <p className="text-sm mb-[10px]">all rights reserved heaphestus.vercel.app© 2024</p>
+      </div>
     </main>
   );
 }
