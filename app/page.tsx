@@ -35,8 +35,8 @@ export default function Home() {
   );
   const items = [
     {
-      title: "The Dawn of Innovation",
-      description: "Explore the birth of groundbreaking ideas and inventions.",
+      title: "Cansat",
+      description: "Cansat is a european low-bagdet missle compatition",
       header: <Skeleton />,
       icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
     },
@@ -59,24 +59,7 @@ export default function Home() {
       header: <Skeleton />,
       icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
     },
-    {
-      title: "The Pursuit of Knowledge",
-      description: "Join the quest for understanding and enlightenment.",
-      header: <Skeleton />,
-      icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
-    },
-    {
-      title: "The Joy of Creation",
-      description: "Experience the thrill of bringing ideas to life.",
-      header: <Skeleton />,
-      icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
-    },
-    {
-      title: "The Spirit of Adventure",
-      description: "Embark on exciting journeys and thrilling discoveries.",
-      header: <Skeleton />,
-      icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
-    },
+
   ];
 
   //MacBook scroll
@@ -142,8 +125,6 @@ export default function Home() {
           <p className="text-2xl text-white font-extrabold">Hepheastus</p>
           <div className="flex flex-row items-center space-x-2 text-lg text-gray-500 max-sm:hidden">
             <p className="cursor-pointer">About</p>
-            <p className="cursor-pointer">Project</p>
-            <p className="cursor-pointer">Blog</p>
           </div>
         </div>
         <div className="flex flex-col items-center space-x-2 text-lg text-gray-500 max-sm:hidden">
@@ -271,7 +252,7 @@ export default function Home() {
               <Badge className="h-10 w-10 transform -rotate-12" />
             </Link>
           }
-          src={`/linear.webp`}
+          src={`/vscode.png`}
           showGradient={false}
         />
       </div>
@@ -305,12 +286,6 @@ export default function Home() {
           <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
             And much more <br /> awaiting for you in the team.
           </h1>
-          <p className="mt-4 font-normal text-base text-neutral-300 max-w-lg text-center mx-auto">
-            Spotlight effect is a great way to draw attention to a specific part
-            of the page. Here, we are drawing the attention towards the text
-            section of the page. I don&apos;t know why but I&apos;m running out
-            of copy.
-          </p>
           <div className="flex flex-row w-full items-center justify-center">
             <Button
               borderRadius="1.75rem"
