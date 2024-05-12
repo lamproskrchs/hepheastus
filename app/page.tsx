@@ -9,7 +9,7 @@ import {
   IconFileBroken,
   IconSignature,
   IconTableColumn,
-  IconMenu
+  IconMenu,
 } from "@tabler/icons-react";
 import { MacbookScroll } from "@/components/ui/macbook-scroll";
 import Link from "next/link";
@@ -19,15 +19,21 @@ import { Spotlight } from "@/components/ui/spotlight";
 import { Button } from "@/components/ui/moving-border";
 import Dropdown from "@/components/ui/dropdown";
 import ContentSection from "@/components/ui/content-section";
-import { Fragment } from 'react'
-import { Menu, Transition } from '@headlessui/react'
+import { Fragment } from "react";
+import { Menu, Transition } from "@headlessui/react";
 import ChevronDownIcon from "@heroicons/react/24/solid/ChevronDownIcon";
-
 
 export default function Home() {
   function classNames(...classes: any[]) {
     return classes.filter(Boolean).join(" ");
   }
+
+  const scrollToRef = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   //Bendo grid
   const Skeleton = () => (
@@ -41,25 +47,24 @@ export default function Home() {
       icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
     },
     {
-      title: "The Digital Revolution",
-      description: "Dive into the transformative power of technology.",
+      title: "EuRoC",
+      description: "INTERNATIONAL SPACE ROBOTICS COMPETITION & CONFERENCE",
       header: <Skeleton />,
       icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
     },
     {
-      title: "The Art of Design",
-      description: "Discover the beauty of thoughtful and functional design.",
+      title: "Build our smart campus",
+      description: "We aim to change our campus for the best !",
       header: <Skeleton />,
       icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
     },
     {
-      title: "The Power of Communication",
+      title: "Team work",
       description:
-        "Understand the impact of effective communication in our lives.",
+        "Understand the impact of effective communication and teamwork in our lives.",
       header: <Skeleton />,
       icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
     },
-
   ];
 
   //MacBook scroll
@@ -124,13 +129,24 @@ export default function Home() {
         <div className="flex flex-row items-center space-x-[35px]">
           <p className="text-2xl text-white font-extrabold">Hepheastus</p>
           <div className="flex flex-row items-center space-x-2 text-lg text-gray-500 max-sm:hidden">
-            <p className="cursor-pointer">About</p>
+            <p onClick={() => scrollToRef("about")} className="cursor-pointer">
+              About
+            </p>
           </div>
         </div>
         <div className="flex flex-col items-center space-x-2 text-lg text-gray-500 max-sm:hidden">
-          <p className="cursor-pointer">Become a member</p>
+          <a
+            target="_blank"
+            href="https://forms.gle/dYWvBPTG7Btp8Wdt6"
+            className="cursor-pointer"
+          >
+            Become a member
+          </a>
         </div>
-        <Menu as="div" className="relative inline-block text-left md:hidden max-sm:visible">
+        <Menu
+          as="div"
+          className="relative inline-block text-left md:hidden max-sm:visible"
+        >
           <div>
             <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
               <IconMenu />
@@ -152,32 +168,20 @@ export default function Home() {
                   {({ active }) => (
                     <a
                       href="#"
+                      onClick={() => scrollToRef("about")}
                       className={classNames(
                         active ? "bg-gray-100 text-gray-900" : "text-gray-700",
                         "block px-4 py-2 text-sm"
                       )}
                     >
-                      Account settings
+                      About
                     </a>
                   )}
                 </Menu.Item>
                 <Menu.Item>
                   {({ active }) => (
                     <a
-                      href="#"
-                      className={classNames(
-                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                        "block px-4 py-2 text-sm"
-                      )}
-                    >
-                      Support
-                    </a>
-                  )}
-                </Menu.Item>
-                <Menu.Item>
-                  {({ active }) => (
-                    <a
-                      href="#"
+                      href="https://github.com/xartokoptiko/hepheastus/blob/main/LICENSE.txt"
                       className={classNames(
                         active ? "bg-gray-100 text-gray-900" : "text-gray-700",
                         "block px-4 py-2 text-sm"
@@ -187,23 +191,6 @@ export default function Home() {
                     </a>
                   )}
                 </Menu.Item>
-                <form method="POST" action="#">
-                  <Menu.Item>
-                    {({ active }) => (
-                      <button
-                        type="submit"
-                        className={classNames(
-                          active
-                            ? "bg-gray-100 text-gray-900"
-                            : "text-gray-700",
-                          "block w-full px-4 py-2 text-left text-sm"
-                        )}
-                      >
-                        Sign out
-                      </button>
-                    )}
-                  </Menu.Item>
-                </form>
               </div>
             </Menu.Items>
           </Transition>
@@ -238,7 +225,9 @@ export default function Home() {
         </BentoGrid>
       </div>
 
-      <ContentSection />
+      <div id="about">
+        <ContentSection />
+      </div>
 
       <div className="overflow-hidden w-full">
         <MacbookScroll
@@ -287,12 +276,14 @@ export default function Home() {
             And much more <br /> awaiting for you in the team.
           </h1>
           <div className="flex flex-row w-full items-center justify-center">
-            <Button
-              borderRadius="1.75rem"
-              className="mx-auto  text-black dark:text-white border-neutral-200 dark:border-slate-800"
-            >
-              Become a member
-            </Button>{" "}
+            <Link target="_blank" href={"https://forms.gle/dYWvBPTG7Btp8Wdt6"}>
+              <Button
+                borderRadius="1.75rem"
+                className="mx-auto  text-black dark:text-white border-neutral-200 dark:border-slate-800"
+              >
+                Become a member
+              </Button>{" "}
+            </Link>
           </div>
         </div>
       </div>
@@ -300,7 +291,7 @@ export default function Home() {
         <div className="flex flex-row w-[200px] h-[5px] rounded-full bg-white shadow-2xl shadow-white"></div>
         <p className="max-sm:text-sm">
           This site is open source ! You can find on{" "}
-          <a className=" text-gray-400" href="#">
+          <a target="_blank" className=" text-gray-400" href="https://github.com/xartokoptiko/hepheastus">
             Github
           </a>
         </p>
