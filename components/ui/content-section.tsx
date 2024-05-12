@@ -43,10 +43,10 @@ export default function ContentSection() {
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
               <p className="text-base font-semibold leading-7 text-indigo-600">
-                Deploy faster
+                but what is it?
               </p>
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                A better workflow
+                About the team
               </h1>
               <p className="mt-6 text-xl leading-8 text-white">
                 The interdisciplinary team of Hephaestus aims at educating
