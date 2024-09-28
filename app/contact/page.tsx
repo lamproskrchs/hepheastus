@@ -164,7 +164,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex flex-col w-fulll h-screen items-center space-y-16 justify-center">
 
-                    <p className="text-white font-extrabold text-6xl ">Find us on </p>
+                    <p className="text-white font-extrabold text-6xl mt-[35px] ">Find us on </p>
 
                     <div className="grid grid-cols-3 w-full gap-10 max-sm:grid-cols-1">
 
