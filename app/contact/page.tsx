@@ -193,7 +193,7 @@ export default function ContactPage() {
 
                     <div className="flex flex-col space-y-3">
                         <p className="font-extrabold text-center">Email</p>
-                        <p>hepheastus@gmail.com</p>
+                        <p>hepheastus.social.uop@gmail.com</p>
                     </div>
 
                 </div>
