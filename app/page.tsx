@@ -10,6 +10,11 @@ import {
   IconSignature,
   IconTableColumn,
   IconMenu,
+  IconHome,
+  IconUser,
+  IconMessage,
+  IconRecordMail,
+  IconNews,
 } from "@tabler/icons-react";
 import { MacbookScroll } from "@/components/ui/macbook-scroll";
 import Link from "next/link";
@@ -22,6 +27,7 @@ import ContentSection from "@/components/ui/content-section";
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import ChevronDownIcon from "@heroicons/react/24/solid/ChevronDownIcon";
+import { FloatingNav } from "@/components/ui/floating-navbar";
 
 export default function Home() {
   function classNames(...classes: any[]) {
@@ -34,6 +40,29 @@ export default function Home() {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  const navItems = [
+    {
+      name: "Home",
+      link: "/",
+      icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    },
+    {
+      name: "The team",
+      link: "/team",
+      icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    },
+    {
+      name: "Contact us",
+      link: "/contact",
+      icon: <IconRecordMail className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    },
+    {
+      name: "Blog",
+      link: "/blog",
+      icon: <IconNews className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    },
+  ];
 
   //Bendo grid
   const Skeleton = () => (
@@ -84,25 +113,25 @@ export default function Home() {
         ></path>
         <path
           fill-rule="evenodd"
-          clip-rule="evenodd"
+          clipRule="evenodd"
           d="M28 54C42.3594 54 54 42.3594 54 28C54 13.6406 42.3594 2 28 2C13.6406 2 2 13.6406 2 28C2 42.3594 13.6406 54 28 54ZM28 56C43.464 56 56 43.464 56 28C56 12.536 43.464 0 28 0C12.536 0 0 12.536 0 28C0 43.464 12.536 56 28 56Z"
           fill="#219653"
         ></path>
         <path
           fill-rule="evenodd"
-          clip-rule="evenodd"
+          clipRule="evenodd"
           d="M27.0769 12H15V46H24.3846V38.8889H27.0769C34.7305 38.8889 41 32.9048 41 25.4444C41 17.984 34.7305 12 27.0769 12ZM24.3846 29.7778V21.1111H27.0769C29.6194 21.1111 31.6154 23.0864 31.6154 25.4444C31.6154 27.8024 29.6194 29.7778 27.0769 29.7778H24.3846Z"
           fill="#24292E"
         ></path>
         <path
           fill-rule="evenodd"
-          clip-rule="evenodd"
+          clipRule="evenodd"
           d="M18 11H29.0769C36.2141 11 42 16.5716 42 23.4444C42 30.3173 36.2141 35.8889 29.0769 35.8889H25.3846V43H18V11ZM25.3846 28.7778H29.0769C32.1357 28.7778 34.6154 26.39 34.6154 23.4444C34.6154 20.4989 32.1357 18.1111 29.0769 18.1111H25.3846V28.7778Z"
           fill="white"
         ></path>
         <path
           fill-rule="evenodd"
-          clip-rule="evenodd"
+          clipRule="evenodd"
           d="M17 10H29.0769C36.7305 10 43 15.984 43 23.4444C43 30.9048 36.7305 36.8889 29.0769 36.8889H26.3846V44H17V10ZM19 12V42H24.3846V34.8889H29.0769C35.6978 34.8889 41 29.7298 41 23.4444C41 17.1591 35.6978 12 29.0769 12H19ZM24.3846 17.1111H29.0769C32.6521 17.1111 35.6154 19.9114 35.6154 23.4444C35.6154 26.9775 32.6521 29.7778 29.0769 29.7778H24.3846V17.1111ZM26.3846 19.1111V27.7778H29.0769C31.6194 27.7778 33.6154 25.8024 33.6154 23.4444C33.6154 21.0864 31.6194 19.1111 29.0769 19.1111H26.3846Z"
           fill="#24292E"
         ></path>
@@ -125,6 +154,9 @@ export default function Home() {
 
   return (
     <main className="flex flex-col w-full bg-gradient-to-br to-black_end from-lightblack via-90%">
+      <div className="relative  w-full">
+        <FloatingNav navItems={navItems} />
+      </div>
       <div className="flex flex-row w-full py-[30px] px-[100px] max-sm:px-[50px] items-center justify-between">
         <div className="flex flex-row items-center space-x-[35px]">
           <p className="text-2xl text-white font-extrabold">Hepheastus</p>
@@ -132,6 +164,15 @@ export default function Home() {
             <p onClick={() => scrollToRef("about")} className="cursor-pointer">
               About
             </p>
+            <a href="/team" className="cursor-pointer">
+              The team
+            </a>
+            <a href="/contact"  className="cursor-pointer">
+              Contact us
+            </a>
+            <a href="/blog"  className="cursor-pointer">
+              Blog
+            </a>
           </div>
         </div>
         <div className="flex flex-col items-center space-x-2 text-lg text-gray-500 max-sm:hidden">
@@ -178,6 +219,49 @@ export default function Home() {
                     </a>
                   )}
                 </Menu.Item>
+
+                <Menu.Item>
+                  {({ active }) => (
+                    <a
+                      href="team"
+                      className={classNames(
+                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                        "block px-4 py-2 text-sm"
+                      )}
+                    >
+                      The Team
+                    </a>
+                  )}
+                </Menu.Item>
+
+                <Menu.Item>
+                  {({ active }) => (
+                    <a
+                      href="/contact"
+                      className={classNames(
+                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                        "block px-4 py-2 text-sm"
+                      )}
+                    >
+                      Contact us
+                    </a>
+                  )}
+                </Menu.Item>
+
+                <Menu.Item>
+                  {({ active }) => (
+                    <a
+                      href="/blog"
+                      className={classNames(
+                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                        "block px-4 py-2 text-sm"
+                      )}
+                    >
+                      Blog
+                    </a>
+                  )}
+                </Menu.Item>
+
                 <Menu.Item>
                   {({ active }) => (
                     <a

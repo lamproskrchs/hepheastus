@@ -3,6 +3,8 @@ import {
   LockClosedIcon,
   ServerIcon,
 } from "@heroicons/react/20/solid";
+import Link from "next/link";
+import { Button } from "./moving-border";
 
 export default function ContentSection() {
   return (
@@ -125,8 +127,20 @@ export default function ContentSection() {
                     and sensors.
                   </span>
                 </li>
+
+                <li className="flex flex-row w-full justify-center gap-x-3" >
+                  <Link href={"/team"}>
+                    <Button
+                      borderRadius="1.75rem"
+                      className="mx-auto  text-black dark:text-white border-neutral-200 dark:border-slate-800"
+                    >
+                      Learn more about the team
+                    </Button>{" "}
+                  </Link>
+                </li>
+
               </ul>
-              
+
             </div>
           </div>
         </div>
