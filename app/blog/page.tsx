@@ -10,7 +10,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import DevelopmentPopup from "@/components/ui/development";
 
-export const Logo = () => {
+export const LogoM = () => {
     return (
         <Link
             href="#"
@@ -27,7 +27,7 @@ export const Logo = () => {
         </Link>
     );
 };
-export const LogoIcon = () => {
+export const LogoIconM = () => {
     return (
         <Link
             href="#"
@@ -150,7 +150,7 @@ export default function Blog() {
                     <Sidebar open={open} setOpen={setOpen}>
                         <SidebarBody className="justify-between gap-10">
                             <div className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
-                                {open ? <Logo /> : <LogoIcon />}
+                                {open ? <LogoM /> : <LogoIconM />}
                                 <div className="mt-8 flex flex-col gap-2">
                                     {links.map((link, idx) => (
                                         <SidebarLink key={idx} link={link} />
