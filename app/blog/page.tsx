@@ -10,7 +10,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import DevelopmentPopup from "@/components/ui/development";
 
-export const LogoM = () => {
+const LogoM = () => {
     return (
         <Link
             href="#"
@@ -27,7 +27,7 @@ export const LogoM = () => {
         </Link>
     );
 };
-export const LogoIconM = () => {
+const LogoIconM = () => {
     return (
         <Link
             href="#"
