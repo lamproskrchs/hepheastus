@@ -63,7 +63,7 @@ export default function Team() {
                 </div>
                 <div className="flex flex-row w-full py-[30px] px-[100px] max-sm:px-[50px] items-center justify-between">
                     <div className="flex flex-row items-center space-x-[35px]">
-                        <p className="text-2xl text-white font-extrabold">Hepheastus</p>
+                        <p className="text-2xl text-white font-extrabold">Hephaestus</p>
                         <div className="flex flex-row items-center space-x-2 text-lg text-gray-500 max-sm:hidden">
                             <a href="/" className="cursor-pointer">
                                 Home
