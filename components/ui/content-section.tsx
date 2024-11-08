@@ -82,12 +82,9 @@ export default function ContentSection() {
                   />
                   <span className="text-white">
                     <strong className="font-semibold text-white">
-                      Rovers and Drones and Rocket
+                      Weather stations
                     </strong>{" "}
-                    The goal is participation in the INTERNATIONAL SPACE
-                    ROBOTICS COMPETITION & CONFERENCE and/or EuRoC. The drones
-                    are rescue drones and are used in cases of human rescue
-                    (e.g., wildfires).
+                    Our project focuses on the design and development of advanced weather stations aimed at providing accurate, real-time environmental data. These stations are equipped with sensors to measure key atmospheric parameters such as temperature, humidity, air pressure, wind speed, and precipitation. The collected data is crucial for monitoring climate patterns, supporting weather forecasting, and assisting in environmental research. By integrating cutting-edge technology and data analytics, these weather stations offer reliable solutions for tracking and understanding the dynamic conditions of our environment.
                   </span>
                 </li>
                 <li className="flex gap-x-3">

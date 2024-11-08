@@ -15,6 +15,7 @@ import {
   IconMessage,
   IconRecordMail,
   IconNews,
+  IconSettingsCheck,
 } from "@tabler/icons-react";
 import { MacbookScroll } from "@/components/ui/macbook-scroll";
 import Link from "next/link";
@@ -48,6 +49,11 @@ export default function Home() {
       icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
+      name: "Project",
+      link: "/projects",
+      icon: <IconSettingsCheck className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    },
+    {
       name: "The team",
       link: "/team",
       icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
@@ -70,27 +76,27 @@ export default function Home() {
   );
   const items = [
     {
-      title: "Cansat",
-      description: "Cansat is a european low-bagdet missle compatition",
+      title: "Project Hermes",
+      description: "All about rockets",
       header: <Skeleton />,
       icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
     },
     {
-      title: "EuRoC",
-      description: "INTERNATIONAL SPACE ROBOTICS COMPETITION & CONFERENCE",
+      title: "Project Athena",
+      description: "Campus build by stuents, for students",
       header: <Skeleton />,
       icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
     },
     {
-      title: "Build our smart campus",
-      description: "We aim to change our campus for the best !",
+      title: "Project Zephyros",
+      description: "What's the weather in the place of innovaiton ?",
       header: <Skeleton />,
       icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
     },
     {
-      title: "Team work",
+      title: "Lean more about the projects",
       description:
-        "Understand the impact of effective communication and teamwork in our lives.",
+        "Hephaestus has a various of on going projects. Click projects to see all of them",
       header: <Skeleton />,
       icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
     },
@@ -160,17 +166,20 @@ export default function Home() {
       <div className="flex flex-row w-full py-[30px] px-[100px] max-sm:px-[50px] items-center justify-between">
         <div className="flex flex-row items-center space-x-[35px]">
           <p className="text-2xl text-white font-extrabold">Hephaestus</p>
-          <div className="flex flex-row items-center space-x-2 text-lg text-gray-500 max-sm:hidden">
-            <p onClick={() => scrollToRef("about")} className="cursor-pointer">
-              About
-            </p>
-            <a href="/team" className="cursor-pointer">
+          <div className="flex flex-row items-center space-x-8 text-lg text-gray-500 max-sm:hidden">
+            <a href="/" className="cursor-pointer hover:text-shadow-[0_4px_8px_#FFFFFF] hover:text-white p-2">
+              home
+            </a>
+            <a href="/projects" className="cursor-pointer hover:text-shadow-[0_4px_8px_#FFFFFF] hover:text-white p-2">
+              Projects
+            </a>
+            <a href="/team" className="cursor-pointer hover:text-shadow-[0_4px_8px_#FFFFFF] hover:text-white p-2">
               The team
             </a>
-            <a href="/contact"  className="cursor-pointer">
+            <a href="/contact" className="cursor-pointer hover:text-shadow-[0_4px_8px_#FFFFFF] hover:text-white p-2">
               Contact us
             </a>
-            <a href="/blog"  className="cursor-pointer">
+            <a href="/blog" className="cursor-pointer hover:text-shadow-[0_4px_8px_#FFFFFF] hover:text-white p-2">
               Blog
             </a>
           </div>
@@ -179,7 +188,7 @@ export default function Home() {
           <a
             target="_blank"
             href="https://forms.gle/dYWvBPTG7Btp8Wdt6"
-            className="cursor-pointer"
+            className="cursor-pointer hover:text-shadow-[0_4px_8px_#FFFFFF] hover:text-white p-2"
           >
             Become a member
           </a>
@@ -208,14 +217,27 @@ export default function Home() {
                 <Menu.Item>
                   {({ active }) => (
                     <a
-                      href="#"
-                      onClick={() => scrollToRef("about")}
+                      href="/"
                       className={classNames(
                         active ? "bg-gray-100 text-gray-900" : "text-gray-700",
                         "block px-4 py-2 text-sm"
                       )}
                     >
-                      About
+                      Home
+                    </a>
+                  )}
+                </Menu.Item>
+
+                <Menu.Item>
+                  {({ active }) => (
+                    <a
+                      href="/projects"
+                      className={classNames(
+                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                        "block px-4 py-2 text-sm"
+                      )}
+                    >
+                      Project
                     </a>
                   )}
                 </Menu.Item>
@@ -275,6 +297,23 @@ export default function Home() {
                     </a>
                   )}
                 </Menu.Item>
+
+
+                <Menu.Item>
+                  {({ active }) => (
+                    <a
+                      target="_blank"
+                      href="https://forms.gle/dYWvBPTG7Btp8Wdt6"
+                      className={classNames(
+                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                        "block px-4 py-2 text-sm"
+                      )}
+                    >
+                      Become a member
+                    </a>
+                  )}
+                </Menu.Item>
+
               </div>
             </Menu.Items>
           </Transition>
@@ -282,7 +321,10 @@ export default function Home() {
       </div>
       <div className="grid grid-cols-2 max-sm:gird max-sm:grid-cols-1 items-center pt-[80px] px-[100px] max-sm:px-[50px]">
         <div className="flex flex-col h-full w-full justify-between max-sm:items-center max-sm:justify-center max-md:justify-center max-md:items-center">
-          <div className="flex flex-col h-full w-full max-sm:pb-16 max-sm:items-center max-sm:justify-center max-md:justify-center max-md:items-center">
+          <div className="flex flex-row h-full w-full max-sm:pb-16 max-sm:items-center max-sm:justify-center max-md:justify-center max-md:items-center">
+            <img
+              src="pcg-baner.png"
+            />
             <img
               src="hyphestusbg.png"
               className="w-[400px] h-[400px] max-sm:w-[200px] max-sm:h-[200px]"

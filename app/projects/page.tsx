@@ -1,12 +1,15 @@
 "use client"
-import { FloatingNav } from "@/components/ui/floating-navbar";
-import { Menu, Transition } from "@headlessui/react";
-import { IconBrandGithub, IconBrandX, IconExchange, IconHome, IconMenu, IconNews, IconNewSection, IconRecordMail, IconSettingsCheck, IconTerminal2, IconUser } from "@tabler/icons-react";
-import { Fragment } from "react";
-import Image from "next/image";
-import { FloatingDock } from "@/components/ui/flaoting-deck";
 
-export default function ContactPage() {
+import { FloatingNav } from "@/components/ui/floating-navbar";
+import { HeroHighlight, Highlight } from "@/components/ui/hero-highlights";
+import { Menu, Transition } from "@headlessui/react";
+import { classNames } from "@react-pdf-viewer/core";
+import { IconHome, IconMenu, IconNews, IconRecordMail, IconSettingsCheck, IconUser } from "@tabler/icons-react";
+import { motion } from "framer-motion";
+import { Fragment } from "react";
+
+export default function Projects() {
+
 
     const navItems = [
         {
@@ -33,61 +36,6 @@ export default function ContactPage() {
             name: "Blog",
             link: "/blog",
             icon: <IconNews className="h-4 w-4 text-neutral-500 dark:text-white" />,
-        },
-    ];
-
-
-    const links = [
-        {
-            title: "Home",
-            icon: (
-                <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-            ),
-            href: "#",
-        },
-
-        {
-            title: "Products",
-            icon: (
-                <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-            ),
-            href: "#",
-        },
-        {
-            title: "Components",
-            icon: (
-                <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-            ),
-            href: "#",
-        },
-        {
-            title: "Aceternity UI",
-            icon: (
-                <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-            ),
-            href: "#",
-        },
-        {
-            title: "Changelog",
-            icon: (
-                <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-            ),
-            href: "#",
-        },
-
-        {
-            title: "Twitter",
-            icon: (
-                <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-            ),
-            href: "#",
-        },
-        {
-            title: "GitHub",
-            icon: (
-                <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-            ),
-            href: "#",
         },
     ];
 
@@ -257,41 +205,83 @@ export default function ContactPage() {
                         </Transition>
                     </Menu>
                 </div>
-                <div className="flex flex-col w-fulll h-screen items-center space-y-16 justify-center">
+                <HeroHighlight>
+                    <motion.h1
+                        initial={{
+                            opacity: 0,
+                            y: 20,
+                        }}
+                        animate={{
+                            opacity: 1,
+                            y: [20, -5, 0],
+                        }}
+                        transition={{
+                            duration: 0.5,
+                            ease: [0.4, 0.0, 0.2, 1],
+                        }}
+                        className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-5xl leading-relaxed lg:leading-snug text-center mx-auto "
+                    >
+                        With hephaestus , You get to choose from a big variety of
+                        projects and teams, each one{" "}
+                        <Highlight className="text-black dark:text-white">
+                            creating innovation.
+                        </Highlight>
+                    </motion.h1>
+                </HeroHighlight>
+                <div className="position: absolute; top: 0; left: 0; width: 100%; overflow: hidden; line-height: 0;">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" className="shape-fill"></path>
+                    </svg>
+                </div>
+                <div className="flex flex-row w-full my-[100px] max-sm:flex-col">
 
-                    <p className="text-white font-extrabold text-6xl mt-[35px] ">Find us on </p>
-
-                    <div className="grid grid-cols-3 w-full gap-10 max-sm:grid-cols-1">
-
-                        <div className="flex flex-col items-center justify-center">
-                            <img src="/social/instagram-logo-banner.avif" className="rounded-lg w-[200px] h-[100px]" />
-                        </div>
-
-                        <div className="flex flex-col items-center justify-center">
-                            <img src="/social/link.png" className="rounded-lg w-[200px] h-[100px]" />
-                        </div>
-
-                        <div className="flex flex-col items-center justify-center">
-                            <img src="/social/git.png" className="rounded-lg w-[200px] h-[100px]" />
-                        </div>
-
-                        <div></div>
-
-                        <div className="flex flex-col items-center justify-center">
-                            <img src="/social/face.jpg" className="rounded-lg w-[200px] h-[100px]" />
-                        </div>
-
-                        <div></div>
-
-
+                    <div className="flex flex-col w-1/2 items-center justify-center max-sm:w-full max-sm:mb-[20px]">
+                        <img src="/ZEPHYR_NO_BG.png" className="w-[500px] h-[300px] max-sm:w-[300px] max-sm:h-[200px]" />
                     </div>
 
-                    <div className="flex flex-col space-y-3">
-                        <p className="font-extrabold text-center">Email</p>
-                        <p>hepheastus.social.uop@gmail.com</p>
+                    <div className="flex flex-col w-1/2 items-center justify-center max-sm:w-full">
+                        <p className="max-w-xl text-xl text-justify p-5"> The Project Zephyros is an innovative initiative by Hephaestus aimed at developing an affordable yet highly effective weather station.
+                            This station combines advanced hardware and software, integrates Internet of Things (IoT) capabilities, and enables user participation, contributing to
+                            immediate and reliable weather forecasting. The goal of the Project is to collaborate with the National Meteorological Service, leveraging technology and the
+                            collective knowledge of users to enhance weather prediction accuracy.</p>
                     </div>
 
                 </div>
+
+
+                <div className="flex flex-row w-full py-[100px] bg-black max-sm:flex-col">
+
+                    <div className="flex flex-col w-1/2 items-center justify-center max-sm:w-full">
+                        <p className="max-w-xl text-xl text-justify p-5"> Project Athena, developed by Team Hephaestus, aims to transform the university into a smart campus that enhances both learning and daily life. Inspired by Athena, the goddess of wisdom and technology, the project integrates AI-driven tools and IoT systems to streamline tasks like classroom scheduling, attendance tracking, and energy management.
+                            By students, for students, Project Athena empowers the university community with real-time access to resources, fostering innovation and creating a more efficient, connected campus.</p>
+                    </div>
+
+                    <div className="flex flex-col w-1/2 items-center justify-center max-sm:w-full">
+                        <img src="/athena.png" className="w-[500px] h-[300px]" />
+                    </div>
+
+                </div>
+
+                <div className="custom-shape-divider-top-1731075309">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" className="shape-fill"></path>
+                    </svg>
+                </div>
+
+                <div className="flex flex-row w-full my-[100px] max-sm:flex-col">
+
+                    <div className="flex flex-col w-1/2 items-center justify-center max-sm:w-full">
+                        <img src="/ermis.png" className="w-[300px] h-[300px]" />
+                    </div>
+
+                    <div className="flex flex-col w-1/2 items-center justify-center max-sm:w-full">
+                        <p className="max-w-xl text-xl text-justify p-5"> Project Hermes, launched in 2024 by Team Hephaestus, is dedicated to advancing aerospace technology and innovation. Our primary goal is to compete in the Czech Rocket Challenge 2025, where we will showcase our engineering and design expertise on an international stage.
+                            With a team of talented students, we are focused on designing and building rockets capable of withstanding the extreme conditions of space travel. Project Hermes represents our commitment to pushing the boundaries of rocketry and making a lasting impact in the field.
+                        </p>
+                    </div>
+
+                </div>
+
                 <div className="flex flex-col pt-[100px] pb-[10px] space-y-7 items-center text-white text-lg ">
                     <div className="flex flex-row w-[200px] h-[5px] rounded-full bg-white shadow-2xl shadow-white"></div>
                     <p className="max-sm:text-sm">
@@ -304,6 +294,7 @@ export default function ContactPage() {
                         all rights reserved heaphestus.vercel.app© 2024
                     </p>
                 </div>
+
             </main>
         </>
     );

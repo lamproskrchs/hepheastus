@@ -2,7 +2,7 @@
 
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beans-collision";
 import { Menu, Transition } from "@headlessui/react";
-import { IconHome, IconMenu, IconNews, IconRecordMail, IconUser } from "@tabler/icons-react";
+import { IconHome, IconMenu, IconNews, IconRecordMail, IconSettingsCheck, IconUser } from "@tabler/icons-react";
 import { Fragment } from "react";
 import Image from "next/image";
 import { cn } from "@/utils/cn";
@@ -17,6 +17,11 @@ export default function Team() {
             name: "Home",
             link: "/",
             icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
+        },
+        {
+            name: "Project",
+            link: "/projects",
+            icon: <IconSettingsCheck className="h-4 w-4 text-neutral-500 dark:text-white" />,
         },
         {
             name: "The team",
@@ -64,14 +69,20 @@ export default function Team() {
                 <div className="flex flex-row w-full py-[30px] px-[100px] max-sm:px-[50px] items-center justify-between">
                     <div className="flex flex-row items-center space-x-[35px]">
                         <p className="text-2xl text-white font-extrabold">Hephaestus</p>
-                        <div className="flex flex-row items-center space-x-2 text-lg text-gray-500 max-sm:hidden">
-                            <a href="/" className="cursor-pointer">
-                                Home
+                        <div className="flex flex-row items-center space-x-8 text-lg text-gray-500 max-sm:hidden">
+                            <a href="/" className="cursor-pointer hover:text-shadow-[0_4px_8px_#FFFFFF] hover:text-white p-2">
+                                home
                             </a>
-                            <a href="/contact" className="cursor-pointer">
+                            <a href="/projects" className="cursor-pointer hover:text-shadow-[0_4px_8px_#FFFFFF] hover:text-white p-2">
+                                Projects
+                            </a>
+                            <a href="/team" className="cursor-pointer hover:text-shadow-[0_4px_8px_#FFFFFF] hover:text-white p-2">
+                                The team
+                            </a>
+                            <a href="/contact" className="cursor-pointer hover:text-shadow-[0_4px_8px_#FFFFFF] hover:text-white p-2">
                                 Contact us
                             </a>
-                            <a href="/blog" className="cursor-pointer">
+                            <a href="/blog" className="cursor-pointer hover:text-shadow-[0_4px_8px_#FFFFFF] hover:text-white p-2">
                                 Blog
                             </a>
                         </div>
@@ -80,7 +91,7 @@ export default function Team() {
                         <a
                             target="_blank"
                             href="https://forms.gle/dYWvBPTG7Btp8Wdt6"
-                            className="cursor-pointer"
+                            className="cursor-pointer hover:text-shadow-[0_4px_8px_#FFFFFF] hover:text-white p-2"
                         >
                             Become a member
                         </a>
@@ -120,6 +131,33 @@ export default function Team() {
                                         )}
                                     </Menu.Item>
 
+                                    <Menu.Item>
+                                        {({ active }) => (
+                                            <a
+                                                href="/projects"
+                                                className={classNames(
+                                                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                                                    "block px-4 py-2 text-sm"
+                                                )}
+                                            >
+                                                Project
+                                            </a>
+                                        )}
+                                    </Menu.Item>
+
+                                    <Menu.Item>
+                                        {({ active }) => (
+                                            <a
+                                                href="team"
+                                                className={classNames(
+                                                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                                                    "block px-4 py-2 text-sm"
+                                                )}
+                                            >
+                                                The Team
+                                            </a>
+                                        )}
+                                    </Menu.Item>
 
                                     <Menu.Item>
                                         {({ active }) => (
@@ -149,7 +187,35 @@ export default function Team() {
                                         )}
                                     </Menu.Item>
 
+                                    <Menu.Item>
+                                        {({ active }) => (
+                                            <a
+                                                href="https://github.com/xartokoptiko/hepheastus/blob/main/LICENSE.txt"
+                                                className={classNames(
+                                                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                                                    "block px-4 py-2 text-sm"
+                                                )}
+                                            >
+                                                License
+                                            </a>
+                                        )}
+                                    </Menu.Item>
 
+
+                                    <Menu.Item>
+                                        {({ active }) => (
+                                            <a
+                                                target="_blank"
+                                                href="https://forms.gle/dYWvBPTG7Btp8Wdt6"
+                                                className={classNames(
+                                                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                                                    "block px-4 py-2 text-sm"
+                                                )}
+                                            >
+                                                Become a member
+                                            </a>
+                                        )}
+                                    </Menu.Item>
 
                                 </div>
                             </Menu.Items>
@@ -171,70 +237,7 @@ export default function Team() {
                     </h2>
                 </BackgroundBeamsWithCollision>
                 <div className="flex flex-col w-full p-10">
-                    <p className="w-full text-center text-5xl font-extrabold">Supervising professors</p>
-                    <div className="grid grid-cols-2 gap-10 max-sm:grid-cols-1 my-32">
-                        <div
-                            className={cn(
-                                " cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4",
-                                "bg-[url(/ecebg.webp)] bg-cover"
-                            )}
-                        >
 
-                            <div className="flex flex-row items-center space-x-4 z-10">
-                                <Image
-                                    height={100}
-                                    width={100}
-                                    alt="Avatar"
-                                    src="/paris_kitsos.png"
-                                    className="h-10 w-10 rounded-full border-2 object-cover"
-                                />
-                                <div className="flex flex-col">
-                                    <p className="font-extrabold text-base text-gray-50 relative z-10">
-                                        Paraskeuas Kitsos
-                                    </p>
-                                    <p className="text-sm text-white">President of Electrical and computer engineering department</p>
-                                </div>
-                            </div>
-                            <div className="text content">
-                                <Link target="_blank" href={"https://www.ece.uop.gr/staff/kitsos-paraskevas/"}>
-                                    <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
-                                        Learn more
-                                    </h1>
-                                </Link>
-
-                            </div>
-                        </div>
-                        <div
-                            className={cn(
-                                " cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4",
-                                "bg-[url(/mechbg.jpg)] bg-cover"
-                            )}
-                        >
-
-                            <div className="flex flex-row items-center space-x-4 z-10">
-                                <Image
-                                    height={100}
-                                    width={100}
-                                    alt="Avatar"
-                                    src="/kalarakis.jpeg"
-                                    className="h-10 w-10 rounded-full border-2 object-cover"
-                                />
-                                <div className="flex flex-col">
-                                    <p className="font-extrabold text-base text-gray-50 relative z-10">
-                                        Kalarakis Alexandros
-                                    </p>
-                                    <p className="text-sm text-white">Associate Professor of Mechanical Engineering department</p>
-                                </div>
-                            </div>
-                            <div className="text content">
-                                <Link target="_blank" href={"https://www.uop.gr/staff-member/alexandros.kalarakis"}>
-                                    <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
-                                        Learn more
-                                    </h1>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
                     <p className="w-full text-center text-5xl font-extrabold">Supervising students</p>
 
                     <div className="grid grid-cols-3 gap-10 max-sm:grid-cols-1 my-32">
@@ -242,197 +245,279 @@ export default function Team() {
 
                         {/* FOTIS */}
 
-                        <div
-                            className={cn(
-                                " cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4",
-                                "bg-[url(/microelectronics.jpg)] bg-cover"
-                            )}
-                        >
+                        <Link href={"/team/fotis_rentzis"}>
+                            <div
+                                className={cn(
+                                    " cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4 hover:shadow-2xl hover:shadow-white",
+                                    "bg-[url(/microelectronics.jpg)] bg-cover"
+                                )}
+                            >
 
-                            <div className="flex flex-row items-center space-x-4 z-10">
-                                <Image
-                                    height={100}
-                                    width={100}
-                                    alt="Avatar"
-                                    src="/ece.png"
-                                    className="h-10 w-10 rounded-full border-2 object-cover"
-                                />
-                                <div className="flex flex-col">
-                                    <p className="font-extrabold text-base text-gray-50 relative z-10">
-                                        Fotis Rentzis
-                                    </p>
-                                    <p className="text-sm text-white">Electrical & Computer Engineering department</p>
+                                <div className="flex flex-row items-center space-x-4 z-10">
+                                    <Image
+                                        height={100}
+                                        width={100}
+                                        alt="Avatar"
+                                        src="/ece.png"
+                                        className="h-10 w-10 rounded-full border-2 object-cover"
+                                    />
+                                    <div className="flex flex-col">
+                                        <p className="font-extrabold text-base text-gray-50 relative z-10">
+                                            Fotis Rentzis
+                                        </p>
+                                        <p className="text-sm text-white">Electrical & Computer Engineering department</p>
+                                    </div>
+                                </div>
+                                <div className="text content">
+                                    <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
+                                        Team director
+                                    </h1>
+
                                 </div>
                             </div>
-                            <div className="text content">
-                                <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
-                                    Team director
-                                </h1>
-
-                            </div>
-                        </div>
+                        </Link>
 
 
                         {/* LAMPROS */}
 
-                        <div
-                            className={cn(
-                                " cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4",
-                                "bg-[url(/informatics.jpg)] bg-cover"
-                            )}
-                        >
+                        <Link href={"/team/lampros_karachristos"}>
 
-                            <div className="flex flex-row items-center space-x-4 z-10">
-                                <Image
-                                    height={100}
-                                    width={100}
-                                    alt="Avatar"
-                                    src="/ece.png"
-                                    className="h-10 w-10 rounded-full border-2 object-cover"
-                                />
-                                <div className="flex flex-col">
-                                    <p className="text-base font-extrabold text-gray-50 relative z-10">
-                                        Lampros Karachristos
-                                    </p>
-                                    <p className="text-sm text-white">Electrical & Computer Engineering department</p>
+                            <div
+                                className={cn(
+                                    " cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4 hover:shadow-2xl hover:shadow-white",
+                                    "bg-[url(/informatics.jpg)] bg-cover"
+                                )}
+                            >
+
+                                <div className="flex flex-row items-center space-x-4 z-10">
+                                    <Image
+                                        height={100}
+                                        width={100}
+                                        alt="Avatar"
+                                        src="/ece.png"
+                                        className="h-10 w-10 rounded-full border-2 object-cover"
+                                    />
+                                    <div className="flex flex-col">
+                                        <p className="text-base font-extrabold text-gray-50 relative z-10">
+                                            Lampros Karachristos
+                                        </p>
+                                        <p className="text-sm text-white">Electrical & Computer Engineering department</p>
+                                    </div>
+                                </div>
+                                <div className="text content">
+                                    <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
+                                        Head of Informatics
+                                    </h1>
+
                                 </div>
                             </div>
-                            <div className="text content">
-                                <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
-                                    Informatics
-                                </h1>
-
-                            </div>
-                        </div>
+                        </Link>
 
                         {/* FILLIPOS */}
 
-                        <div
-                            className={cn(
-                                " cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4",
-                                "bg-[url(/aerodynamics.webp)] bg-cover"
-                            )}
-                        >
+                        <Link href={"/team/fillipos_stamos"}>
+                            <div
+                                className={cn(
+                                    " cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4 hover:shadow-2xl hover:shadow-white",
+                                    "bg-[url(/aerodynamics.webp)] bg-cover"
+                                )}
+                            >
 
-                            <div className="flex flex-row items-center space-x-4 z-10">
-                                <Image
-                                    height={100}
-                                    width={100}
-                                    alt="Avatar"
-                                    src="/mech.png"
-                                    className="h-10 w-10 rounded-full border-2 object-cover"
-                                />
-                                <div className="flex flex-col">
-                                    <p className="font-extrabold text-base text-gray-50 relative z-10">
-                                        Fillipos Stamos
-                                    </p>
-                                    <p className="text-sm text-white">Mehcanical Engeeniring Department</p>
+                                <div className="flex flex-row items-center space-x-4 z-10">
+                                    <Image
+                                        height={100}
+                                        width={100}
+                                        alt="Avatar"
+                                        src="/mech.png"
+                                        className="h-10 w-10 rounded-full border-2 object-cover"
+                                    />
+                                    <div className="flex flex-col">
+                                        <p className="font-extrabold text-base text-gray-50 relative z-10">
+                                            Fillipos Stamos
+                                        </p>
+                                        <p className="text-sm text-white">Mehcanical Engeeniring Department</p>
+                                    </div>
+                                </div>
+                                <div className="text content">
+                                    <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
+                                        Head of Aerodynamics/ Project Hermes
+                                    </h1>
+
                                 </div>
                             </div>
-                            <div className="text content">
-                                <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
-                                    Aerodynamics
-                                </h1>
+                        </Link>
 
-                            </div>
-                        </div>
+                        {/* panagiotis */}
 
-                        {/* AGGELOS */}
+                        <Link href={"/team/panagiotis_diamantis"}>
+                            <div
+                                className={cn(
+                                    " cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4 hover:shadow-2xl hover:shadow-white",
+                                    " bg-[url(/fpg.jpg)] bg-cover"
+                                )}
+                            >
 
-                        <div
-                            className={cn(
-                                " cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4",
-                                "bg-[url(/micro.jpg)] bg-cover"
-                            )}
-                        >
+                                <div className="flex flex-row items-center space-x-4 z-10">
+                                    <Image
+                                        height={100}
+                                        width={100}
+                                        alt="Avatar"
+                                        src="/ece.png"
+                                        className="h-10 w-10 rounded-full border-2 object-cover"
+                                    />
+                                    <div className="flex flex-col">
+                                        <p className="font-extrabold text-base text-gray-50 relative z-10">
+                                            Panagiotis Diamantis
+                                        </p>
+                                        <p className="text-sm text-white">Electrical & Computer Engineering department</p>
+                                    </div>
+                                </div>
+                                <div className="text content">
+                                    <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
+                                        Project Athena
+                                    </h1>
 
-                            <div className="flex flex-row items-center space-x-4 z-10">
-                                <Image
-                                    height={100}
-                                    width={100}
-                                    alt="Avatar"
-                                    src="/ece.png"
-                                    className="h-10 w-10 rounded-full border-2 object-cover"
-                                />
-                                <div className="flex flex-col">
-                                    <p className="font-extrabold text-base text-gray-50 relative z-10">
-                                        Simonidis Aggelos
-                                    </p>
-                                    <p className="text-sm text-white">Electrical & Computer Engineering department</p>
                                 </div>
                             </div>
-                            <div className="text content">
-                                <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
-                                    Micro-electronics reasearch
-                                </h1>
-
-                            </div>
-                        </div>
+                        </Link>
 
                         {/* CHRISTOS */}
 
-                        <div
-                            className={cn(
-                                " cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4",
-                                "bg-[url(/fpg.jpg)] bg-cover"
-                            )}
-                        >
+                        <Link href={"/team/christos_rompovilas"}>
+                            <div
+                                className={cn(
+                                    " cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4 hover:shadow-2xl hover:shadow-white",
+                                    "bg-[url(/micro.jpg)] bg-cover"
+                                )}
+                            >
 
-                            <div className="flex flex-row items-center space-x-4 z-10">
-                                <Image
-                                    height={100}
-                                    width={100}
-                                    alt="Avatar"
-                                    src="/ece.png"
-                                    className="h-10 w-10 rounded-full border-2 object-cover"
-                                />
-                                <div className="flex flex-col">
-                                    <p className="font-extrabold text-base text-gray-50 relative z-10">
-                                        Christos Rampavilas
-                                    </p>
-                                    <p className="text-sm text-white">Electrical & Computer Engineering department</p>
+                                <div className="flex flex-row items-center space-x-4 z-10">
+                                    <Image
+                                        height={100}
+                                        width={100}
+                                        alt="Avatar"
+                                        src="/ece.png"
+                                        className="h-10 w-10 rounded-full border-2 object-cover"
+                                    />
+                                    <div className="flex flex-col">
+                                        <p className="font-extrabold text-base text-gray-50 relative z-10">
+                                            Christos Rampavilas
+                                        </p>
+                                        <p className="text-sm text-white">Electrical & Computer Engineering department</p>
+                                    </div>
+                                </div>
+                                <div className="text content">
+                                    <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
+                                        Micro-electronics reasearch/ Project Zephyros
+                                    </h1>
+
                                 </div>
                             </div>
-                            <div className="text content">
-                                <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
-                                    FPG Research
-                                </h1>
-
-                            </div>
-                        </div>
+                        </Link>
 
                         {/* YIANNIS */}
 
-                        <div
-                            className={cn(
-                                " cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4",
-                                "bg-[url(/social.jpg)] bg-cover"
-                            )}
-                        >
+                        <Link href={"/team/yiannis_tokmakidis"}>
+                            <div
+                                className={cn(
+                                    " cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4 hover:shadow-2xl hover:shadow-white",
+                                    "bg-[url(/social.jpg)] bg-cover"
+                                )}
+                            >
 
-                            <div className="flex flex-row items-center space-x-4 z-10">
-                                <Image
-                                    height={100}
-                                    width={100}
-                                    alt="Avatar"
-                                    src="/ece.png"
-                                    className="h-10 w-10 rounded-full border-2 object-cover"
-                                />
-                                <div className="flex flex-col">
-                                    <p className="font-extrabold text-base text-gray-50 relative z-10">
-                                        Yiannis Tokmakidis
-                                    </p>
-                                    <p className="text-sm text-white">Electrical & Computer Engineering department</p>
+                                <div className="flex flex-row items-center space-x-4 z-10">
+                                    <Image
+                                        height={100}
+                                        width={100}
+                                        alt="Avatar"
+                                        src="/ece.png"
+                                        className="h-10 w-10 rounded-full border-2 object-cover"
+                                    />
+                                    <div className="flex flex-col">
+                                        <p className="font-extrabold text-base text-gray-50 relative z-10">
+                                            Yiannis Tokmakidis
+                                        </p>
+                                        <p className="text-sm text-white">Electrical & Computer Engineering department</p>
+                                    </div>
+                                </div>
+                                <div className="text content">
+                                    <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
+                                        Social Media management
+                                    </h1>
+
                                 </div>
                             </div>
-                            <div className="text content">
-                                <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
-                                    Social Media management
-                                </h1>
+                        </Link>
 
+                    </div>
+
+                    <p className="w-full text-center text-5xl font-extrabold">Supervising professors</p>
+                    <div className="grid grid-cols-2 gap-10 max-sm:grid-cols-1 my-32">
+                        <Link target="_blank" href={"https://www.ece.uop.gr/staff/kitsos-paraskevas/"}>
+                            <div
+                                className={cn(
+                                    " cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4 hover:shadow-2xl hover:shadow-white",
+                                    "bg-[url(/ecebg.webp)] bg-cover"
+                                )}
+                            >
+
+                                <div className="flex flex-row items-center space-x-4 z-10">
+                                    <Image
+                                        height={100}
+                                        width={100}
+                                        alt="Avatar"
+                                        src="/paris_kitsos.png"
+                                        className="h-10 w-10 rounded-full border-2 object-cover"
+                                    />
+                                    <div className="flex flex-col">
+                                        <p className="font-extrabold text-base text-gray-50 relative z-10">
+                                            Paraskeuas Kitsos
+                                        </p>
+                                        <p className="text-sm text-white">President of Electrical and computer engineering department</p>
+                                    </div>
+                                </div>
+                                <div className="text content">
+
+                                    <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
+                                        Learn more
+                                    </h1>
+
+
+                                </div>
                             </div>
-                        </div>
+                        </Link>
+                        <Link target="_blank" href={"https://www.uop.gr/staff-member/alexandros.kalarakis"}>
+                            <div
+                                className={cn(
+                                    " cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4 hover:shadow-2xl hover:shadow-white",
+                                    "bg-[url(/mechbg.jpg)] bg-cover"
+                                )}
+                            >
 
+                                <div className="flex flex-row items-center space-x-4 z-10">
+                                    <Image
+                                        height={100}
+                                        width={100}
+                                        alt="Avatar"
+                                        src="/kalarakis.jpeg"
+                                        className="h-10 w-10 rounded-full border-2 object-cover"
+                                    />
+                                    <div className="flex flex-col">
+                                        <p className="font-extrabold text-base text-gray-50 relative z-10">
+                                            Kalarakis Alexandros
+                                        </p>
+                                        <p className="text-sm text-white">Associate Professor of Mechanical Engineering department</p>
+                                    </div>
+                                </div>
+                                <div className="text content">
+
+                                    <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
+                                        Learn more
+                                    </h1>
+
+                                </div>
+                            </div>
+                        </Link>
                     </div>
 
                 </div>
