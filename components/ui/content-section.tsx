@@ -129,7 +129,7 @@ export default function ContentSection() {
                   <Link href={"/team"}>
                     <Button
                       borderRadius="1.75rem"
-                      className="mx-auto  text-black dark:text-white border-neutral-200 dark:border-slate-800"
+                      className="mx-auto text-white border-slate-800"
                     >
                       Learn more about the team
                     </Button>{" "}

@@ -219,12 +219,12 @@ export default function Projects() {
                             duration: 0.5,
                             ease: [0.4, 0.0, 0.2, 1],
                         }}
-                        className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-5xl leading-relaxed lg:leading-snug text-center mx-auto "
+                        className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-white max-w-5xl leading-relaxed lg:leading-snug text-center mx-auto "
                     >
                         With hephaestus , You get to choose from a big variety of
                         projects and teams, each one{" "}
-                        <Highlight className="text-black dark:text-white">
-                            creating innovation.
+                        <Highlight className="text-white">
+                            creating innovation
                         </Highlight>
                     </motion.h1>
                 </HeroHighlight>
@@ -240,7 +240,7 @@ export default function Projects() {
                     </div>
 
                     <div className="flex flex-col w-1/2 items-center justify-center max-sm:w-full">
-                        <p className="max-w-xl text-xl text-justify p-5"> The Project Zephyros is an innovative initiative by Hephaestus aimed at developing an affordable yet highly effective weather station.
+                        <p className="max-w-xl text-xl text-white text-justify p-5"> The Project Zephyros is an innovative initiative by Hephaestus aimed at developing an affordable yet highly effective weather station.
                             This station combines advanced hardware and software, integrates Internet of Things (IoT) capabilities, and enables user participation, contributing to
                             immediate and reliable weather forecasting. The goal of the Project is to collaborate with the National Meteorological Service, leveraging technology and the
                             collective knowledge of users to enhance weather prediction accuracy.</p>
@@ -252,7 +252,7 @@ export default function Projects() {
                 <div className="flex flex-row w-full py-[100px] bg-black max-sm:flex-col">
 
                     <div className="flex flex-col w-1/2 items-center justify-center max-sm:w-full">
-                        <p className="max-w-xl text-xl text-justify p-5"> Project Athena, developed by Team Hephaestus, aims to transform the university into a smart campus that enhances both learning and daily life. Inspired by Athena, the goddess of wisdom and technology, the project integrates AI-driven tools and IoT systems to streamline tasks like classroom scheduling, attendance tracking, and energy management.
+                        <p className="max-w-xl text-xl text-justify p-5 text-white"> Project Athena, developed by Team Hephaestus, aims to transform the university into a smart campus that enhances both learning and daily life. Inspired by Athena, the goddess of wisdom and technology, the project integrates AI-driven tools and IoT systems to streamline tasks like classroom scheduling, attendance tracking, and energy management.
                             By students, for students, Project Athena empowers the university community with real-time access to resources, fostering innovation and creating a more efficient, connected campus.</p>
                     </div>
 
@@ -275,7 +275,7 @@ export default function Projects() {
                     </div>
 
                     <div className="flex flex-col w-1/2 items-center justify-center max-sm:w-full">
-                        <p className="max-w-xl text-xl text-justify p-5"> Project Hermes, launched in 2024 by Team Hephaestus, is dedicated to advancing aerospace technology and innovation. Our primary goal is to compete in the Czech Rocket Challenge 2025, where we will showcase our engineering and design expertise on an international stage.
+                        <p className="max-w-xl text-xl text-justify p-5 text-white"> Project Hermes, launched in 2024 by Team Hephaestus, is dedicated to advancing aerospace technology and innovation. Our primary goal is to compete in the Czech Rocket Challenge 2025, where we will showcase our engineering and design expertise on an international stage.
                             With a team of talented students, we are focused on designing and building rockets capable of withstanding the extreme conditions of space travel. Project Hermes represents our commitment to pushing the boundaries of rocketry and making a lasting impact in the field.
                         </p>
                     </div>

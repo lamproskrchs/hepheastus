@@ -286,7 +286,7 @@ export default function ContactPage() {
 
                     </div>
 
-                    <div className="flex flex-col space-y-3">
+                    <div className="flex flex-col space-y-3 text-white">
                         <p className="font-extrabold text-center">Email</p>
                         <p>hepheastus.social.uop@gmail.com</p>
                     </div>

@@ -300,8 +300,8 @@ const Teamate: React.FC = () => {
                 </Vortex>
             </div>
             <div className="flex flex-col w-full h-full items-center justify-center space-y-5 my-[100px]">
-                <p className="w-full text-center text-5xl font-extrabold">About</p>
-                <p className="text-justify max-w-5xl break-words p-5 text-lg">{student.description}</p>
+                <p className="w-full text-center text-5xl font-extrabold text-white">About</p>
+                <p className="text-justify max-w-5xl break-words p-5 text-lg text-white">{student.description}</p>
             </div>
             <div className="flex flex-col pt-[100px] pb-[10px] space-y-7 items-center text-white text-lg ">
                 <div className="flex flex-row w-[200px] h-[5px] rounded-full bg-white shadow-2xl shadow-white"></div>

@@ -72,7 +72,7 @@ export default function Home() {
 
   //Bendo grid
   const Skeleton = () => (
-    <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
+    <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-900 to-neutral-800 "></div>
   );
   const items = [
     {
@@ -405,7 +405,7 @@ export default function Home() {
             <Link target="_blank" href={"https://forms.gle/dYWvBPTG7Btp8Wdt6"}>
               <Button
                 borderRadius="1.75rem"
-                className="mx-auto  text-black dark:text-white border-neutral-200 dark:border-slate-800"
+                className="mx-auto  text-white border-neutral-200 dark:border-slate-800"
               >
                 Become a member
               </Button>{" "}

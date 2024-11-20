@@ -224,7 +224,7 @@ export default function Team() {
                 </div>
 
                 <BackgroundBeamsWithCollision>
-                    <h2 className="text-2xl relative z-20 md:text-4xl lg:text-7xl font-bold text-center text-black dark:text-white font-sans tracking-tight">
+                    <h2 className="text-2xl relative z-20 md:text-4xl lg:text-7xl font-bold text-center text-white font-sans tracking-tight">
                         What&apos;s cooler than being part of{" "}<br />
                         <div className="relative mx-auto inline-block w-max [filter:drop-shadow(0px_1px_3px_rgba(27,_37,_80,_0.14))]">
                             <div className="absolute left-0 top-[1px] bg-clip-text bg-no-repeat text-transparent bg-gradient-to-r py-4 from-purple-500 via-violet-500 to-pink-500 [text-shadow:0_0_rgba(0,0,0,0.1)]">
@@ -238,7 +238,7 @@ export default function Team() {
                 </BackgroundBeamsWithCollision>
                 <div className="flex flex-col w-full p-10">
 
-                    <p className="w-full text-center text-5xl font-extrabold">Supervising students</p>
+                    <p className="w-full text-center text-5xl font-extrabold text-white">Supervising students</p>
 
                     <div className="grid grid-cols-3 gap-10 max-sm:grid-cols-1 my-32">
 
@@ -451,7 +451,7 @@ export default function Team() {
 
                     </div>
 
-                    <p className="w-full text-center text-5xl font-extrabold">Supervising professors</p>
+                    <p className="w-full text-center text-5xl font-extrabold text-white">Supervising professors</p>
                     <div className="grid grid-cols-2 gap-10 max-sm:grid-cols-1 my-32">
                         <Link target="_blank" href={"https://www.ece.uop.gr/staff/kitsos-paraskevas/"}>
                             <div
@@ -523,13 +523,13 @@ export default function Team() {
                 </div>
 
                 <div className="flex flex-col items-center justify-center h-[40rem]  ">
-                    <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base  ">
+                    <p className="text-neutral-200 text-xs sm:text-base  ">
                         The road of innovation starts from here
                     </p>
                     <TypewriterEffectSmooth words={words} />
                     <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
                         <a target="_blank"
-                            href="https://forms.gle/dYWvBPTG7Btp8Wdt6" className="flex flex-col w-40 h-10 rounded-xl items-center justify-center bg-black border dark:border-white border-transparent text-white text-sm">
+                            href="https://forms.gle/dYWvBPTG7Btp8Wdt6" className="flex flex-col w-40 h-10 rounded-xl items-center justify-center border-white border-transparent text-white text-sm">
                             Join now
                         </a>
                         <a href="/contact" className="flex flex-col items-center justify-center w-40 h-10 rounded-xl bg-white text-black border border-black  text-sm">
