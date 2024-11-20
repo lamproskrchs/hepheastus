@@ -277,7 +277,7 @@ const Teamate: React.FC = () => {
             <div className="w-[calc(100%-4rem)] mx-auto rounded-md h-[30rem] overflow-hidden">
                 <Vortex className="flex flex-row items-center justify-between px-2 md:px-10 py-4 w-full h-full">
                     <div className="flex flex-row items-center justify-center">
-                        <img src={student.photo} className="w-[150px] h-[150px] max-sm:w-[60px] max-sm:h-[60px] rounded-full" />
+                        <img src={student.photo} className="w-[150px] h-[150px] max-sm:w-[40px] max-sm:h-[40px] rounded-full" />
                     </div>
                     <div className="flex items-center flex-col justify-center px-2">
                         <h2 className="text-white text-2xl md:text-6xl font-bold text-center">
@@ -295,7 +295,7 @@ const Teamate: React.FC = () => {
                         </div>
                     </div>
                     <div className="flex flex-row items-center justify-center">
-                        <img src={student.school} className="w-[150px] h-[150px] max-sm:w-[60px] max-sm:h-[60px] rounded-full" />
+                        <img src={student.school} className="w-[150px] h-[150px] max-sm:w-[40px] max-sm:h-[40px] rounded-full" />
                     </div>
                 </Vortex>
             </div>

@@ -236,7 +236,7 @@ export default function Projects() {
                 <div className="flex flex-row w-full my-[100px] max-sm:flex-col">
 
                     <div className="flex flex-col w-1/2 items-center justify-center max-sm:w-full max-sm:mb-[20px]">
-                        <img src="/ZEPHYR_NO_BG.png" className="w-[500px] h-[300px] max-sm:w-[300px] max-sm:h-[200px]" />
+                        <img src="/ZEPHYR_NO_BG.png" className="w-[500px] h-[300px] max-sm:w-[200px] max-sm:h-[110px]" />
                     </div>
 
                     <div className="flex flex-col w-1/2 items-center justify-center max-sm:w-full">
@@ -257,7 +257,7 @@ export default function Projects() {
                     </div>
 
                     <div className="flex flex-col w-1/2 items-center justify-center max-sm:w-full">
-                        <img src="/athena.png" className="w-[500px] h-[300px]" />
+                        <img src="/athena.png" className="w-[500px] h-[300px] max-sm:w-[300px] max-sm:h-[200px]" />
                     </div>
 
                 </div>
@@ -271,7 +271,7 @@ export default function Projects() {
                 <div className="flex flex-row w-full my-[100px] max-sm:flex-col">
 
                     <div className="flex flex-col w-1/2 items-center justify-center max-sm:w-full">
-                        <img src="/ermis.png" className="w-[300px] h-[300px]" />
+                        <img src="/ermis.png" className="w-[300px] h-[300px] max-sm:w-[150px] max-sm:h-[150px]" />
                     </div>
 
                     <div className="flex flex-col w-1/2 items-center justify-center max-sm:w-full">
