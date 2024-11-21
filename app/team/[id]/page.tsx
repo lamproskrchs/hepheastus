@@ -1,7 +1,6 @@
 "use client"
 
 import { FloatingNav } from "@/components/ui/floating-navbar";
-import { SparklesCore } from "@/components/ui/sparkles";
 import { Vortex } from "@/components/ui/vertex";
 import { Menu, Transition } from "@headlessui/react";
 import { IconHome, IconUser, IconRecordMail, IconNews, IconMenu, IconSettingsCheck } from "@tabler/icons-react";
@@ -99,7 +98,17 @@ const Teamate: React.FC = () => {
             cv_file: "fillipos_stamos.pdf",
             school: "/mech.png",
             description: "Filippos Stamos is a Mechanical Engineering student at the University of Peloponnese. They have participated in competitions such as F1 in Schools with the Bluearrowgr team at the Gymnasium and General Lyceum of Vouliagmeni. Filippos is involved in repairing electrical appliances, sound recording, and lighting for performances with musical instruments. They created an internet radio at the 2nd Lyceum of Koropi and a podcast, serving as both producer and technician. Upon entering university, Filippos joined El.Me.Pa and founded the Formula Student team 'Minautor Racing' where they initially served as Technical Director before transitioning to the leader of the aerodynamics and cooling sub-team. Their goal is to optimize the single-seater car's performance, focusing on engine cooling and maximizing grip during cornering to improve lap times, particularly in turns. Filippos is also the Mechanical Engineering Coordinator for the Hephaestus team at the University of Peloponnese and the Team Director of Project Hermes, where they are responsible for aerodynamics. The project aims to develop a rocket for the Czech Rocket Challenge, with a target altitude of around 1 kilometer. Additionally, they lead SimUoPLabs, a student research team at the University of Peloponnese focused on static and fluid dynamics analysis.",
-        }
+        },
+
+        {
+            id: "athanasios_daoulas",
+            name: "Athanasios Daoulas",
+            photo: "/boy.png",
+            head: "Head of Hyron",
+            cv_file: "fillipos_stamos.pdf",
+            school: "/ece.png",
+            description: "Athanasios Daoulas is a second-year student at the Polytechnic School of the University of the Peloponnese, studying Electrical and Computer Engineering. He is known for his diligence and eagerness to expand his knowledge in the field of electrical engineering. His experience includes full-time work as an electrician specializing in internal electrical installations, and he holds professional licenses in various categories of electrical systems. With a strong academic background, including an honors high school diploma and a specialization in Electrical Systems, Electronics, and Automation, he has also acquired certifications such as the ECDL for IT skills and an ESB B2 certificate in English. His research interests span renewable energy sources, electronics, PLC programming, and electrical design.",
+        },
     ];
 
     const student = supervising_students.find((s) => s.id === id);

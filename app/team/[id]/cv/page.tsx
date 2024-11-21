@@ -36,6 +36,10 @@ const Cv: React.FC = () => {
       id: "yiannis_tokmakidis",
       cv_file: "/cvs/yiannis_tokmakidis.pdf",
     },
+    {
+      id: "athanasios_daoulas",
+      cv_file: "/cvs/athanasios_daoulas.pdf",
+    },
   ];
 
   const student = supervising_students.find((s) => s.id === id);

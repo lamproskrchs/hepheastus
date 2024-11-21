@@ -449,6 +449,41 @@ export default function Team() {
                             </div>
                         </Link>
 
+                        <div></div>
+
+                        <Link href={"/team/athanasios_daoulas"}>
+                            <div
+                                className={cn(
+                                    " cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4 hover:shadow-2xl hover:shadow-white",
+                                    "bg-[url(/plcdev.jpg)] bg-cover"
+                                )}
+                            >
+
+                                <div className="flex flex-row items-center space-x-4 z-10">
+                                    <Image
+                                        height={100}
+                                        width={100}
+                                        alt="Avatar"
+                                        src="/ece.png"
+                                        className="h-10 w-10 rounded-full border-2 object-cover"
+                                    />
+                                    <div className="flex flex-col">
+                                        <p className="font-extrabold text-base text-gray-50 relative z-10">
+                                            Athanasios Daoulas
+                                        </p>
+                                        <p className="text-sm text-white">Electrical & Computer Engineering department</p>
+                                    </div>
+                                </div>
+                                <div className="text content">
+                                    <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
+                                        Micro-electronics reasearch/ Project Zephyros
+                                    </h1>
+
+                                </div>
+                            </div>
+                            <div></div>
+                        </Link>
+
                     </div>
 
                     <p className="w-full text-center text-5xl font-extrabold text-white">Supervising professors</p>

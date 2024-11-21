@@ -282,6 +282,24 @@ export default function Projects() {
 
                 </div>
 
+                <div className="custom-shape-divider-bottom-1732185752">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" className="shape-fill"></path>
+                    </svg>
+                </div>
+
+                <div className="flex flex-row w-full py-[100px] bg-black max-sm:flex-col">
+
+                    <div className="flex flex-col w-1/2 items-center justify-center max-sm:w-full">
+                        <p className="max-w-xl text-xl text-justify p-5 text-white"> The Heron subteam, part of the Hephaestus team, focuses on automation and control engineering, starting with the utilization of PLCs (Programmable Logic Controllers) for developing automation applications. Our initial goal is to optimize systems, enhance efficiency, and ensure precision, while planning to expand our expertise in the future by incorporating new technologies and methods for comprehensive and innovative solutions.</p>
+                    </div>
+
+                    <div className="flex flex-col w-1/2 items-center justify-center max-sm:w-full">
+                        <img src="/hyron.png" className="w-[300px] h-[300px] max-sm:w-[300px] max-sm:h-[200px]" />
+                    </div>
+
+                </div>
+
                 <div className="flex flex-col pt-[100px] pb-[10px] space-y-7 items-center text-white text-lg ">
                     <div className="flex flex-row w-[200px] h-[5px] rounded-full bg-white shadow-2xl shadow-white"></div>
                     <p className="max-sm:text-sm">
