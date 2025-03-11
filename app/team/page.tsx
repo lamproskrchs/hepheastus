@@ -362,14 +362,14 @@ export default function Team() {
                                         height={100}
                                         width={100}
                                         alt="Avatar"
-                                        src="/ece.png"
+                                        src="/civil.jpg"
                                         className="h-10 w-10 rounded-full border-2 object-cover"
                                     />
                                     <div className="flex flex-col">
                                         <p className="font-extrabold text-base text-gray-50 relative z-10">
                                             Panagiotis Diamantis
                                         </p>
-                                        <p className="text-sm text-white">Electrical & Computer Engineering department</p>
+                                        <p className="text-sm text-white">Civil Engineering</p>
                                     </div>
                                 </div>
                                 <div className="text content">
@@ -415,42 +415,6 @@ export default function Team() {
                             </div>
                         </Link>
 
-                        {/* YIANNIS */}
-
-                        <Link href={"/team/yiannis_tokmakidis"}>
-                            <div
-                                className={cn(
-                                    " cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4 hover:shadow-2xl hover:shadow-white",
-                                    "bg-[url(/social.jpg)] bg-cover"
-                                )}
-                            >
-
-                                <div className="flex flex-row items-center space-x-4 z-10">
-                                    <Image
-                                        height={100}
-                                        width={100}
-                                        alt="Avatar"
-                                        src="/ece.png"
-                                        className="h-10 w-10 rounded-full border-2 object-cover"
-                                    />
-                                    <div className="flex flex-col">
-                                        <p className="font-extrabold text-base text-gray-50 relative z-10">
-                                            Yiannis Tokmakidis
-                                        </p>
-                                        <p className="text-sm text-white">Electrical & Computer Engineering department</p>
-                                    </div>
-                                </div>
-                                <div className="text content">
-                                    <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
-                                        Social Media management
-                                    </h1>
-
-                                </div>
-                            </div>
-                        </Link>
-
-                        <div></div>
-
                         <Link href={"/team/athanasios_daoulas"}>
                             <div
                                 className={cn(
@@ -476,18 +440,18 @@ export default function Team() {
                                 </div>
                                 <div className="text content">
                                     <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
-                                        Micro-electronics reasearch/ Project Zephyros
+                                        Automation and Control Engineering / Heron
                                     </h1>
 
                                 </div>
                             </div>
-                            <div></div>
+                            
                         </Link>
 
                     </div>
 
                     <p className="w-full text-center text-5xl font-extrabold text-white">Supervising professors</p>
-                    <div className="grid grid-cols-2 gap-10 max-sm:grid-cols-1 my-32">
+                    <div className="grid grid-cols-3 gap-10 max-sm:grid-cols-1 my-32">
                         <Link target="_blank" href={"https://www.ece.uop.gr/staff/kitsos-paraskevas/"}>
                             <div
                                 className={cn(
@@ -542,6 +506,39 @@ export default function Team() {
                                             Kalarakis Alexandros
                                         </p>
                                         <p className="text-sm text-white">Associate Professor of Mechanical Engineering department</p>
+                                    </div>
+                                </div>
+                                <div className="text content">
+
+                                    <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
+                                        Learn more
+                                    </h1>
+
+                                </div>
+                            </div>
+                        </Link>
+
+                        <Link target="_blank" href={"https://scholar.google.com/citations?user=Qc0Uko4AAAAJ&hl=en"}>
+                            <div
+                                className={cn(
+                                    " cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4 hover:shadow-2xl hover:shadow-white",
+                                    "bg-[url(/structular.png)] bg-cover"
+                                )}
+                            >
+
+                                <div className="flex flex-row items-center space-x-4 z-10">
+                                    <Image
+                                        height={100}
+                                        width={100}
+                                        alt="Avatar"
+                                        src="/panagiota.jpeg"
+                                        className="h-10 w-10 rounded-full border-2 object-cover"
+                                    />
+                                    <div className="flex flex-col">
+                                        <p className="font-extrabold text-base text-gray-50 relative z-10">
+                                            Panagiota S. Katsimpini
+                                        </p>
+                                        <p className="text-sm text-white">Post-doctoral Researcher</p>
                                     </div>
                                 </div>
                                 <div className="text content">

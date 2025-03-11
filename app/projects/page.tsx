@@ -233,7 +233,7 @@ export default function Projects() {
                         <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" className="shape-fill"></path>
                     </svg>
                 </div>
-                <div className="flex flex-row w-full my-[100px] max-sm:flex-col">
+                <div className="flex flex-row w-full my-[100px] max-sm:flex-col" id="project_zephyros">
 
                     <div className="flex flex-col w-1/2 items-center justify-center max-sm:w-full max-sm:mb-[20px]">
                         <img src="/ZEPHYR_NO_BG.png" className="w-[500px] h-[300px] max-sm:w-[200px] max-sm:h-[110px]" />
@@ -249,7 +249,7 @@ export default function Projects() {
                 </div>
 
 
-                <div className="flex flex-row w-full py-[100px] bg-black max-sm:flex-col">
+                <div className="flex flex-row w-full py-[100px] bg-black max-sm:flex-col" id="project_athena">
 
                     <div className="flex flex-col w-1/2 items-center justify-center max-sm:w-full">
                         <p className="max-w-xl text-xl text-justify p-5 text-white"> Project Athena, developed by Team Hephaestus, aims to transform the university into a smart campus that enhances both learning and daily life. Inspired by Athena, the goddess of wisdom and technology, the project integrates AI-driven tools and IoT systems to streamline tasks like classroom scheduling, attendance tracking, and energy management.
@@ -268,7 +268,7 @@ export default function Projects() {
                     </svg>
                 </div>
 
-                <div className="flex flex-row w-full my-[100px] max-sm:flex-col">
+                <div className="flex flex-row w-full my-[100px] max-sm:flex-col" id="project_hermes">
 
                     <div className="flex flex-col w-1/2 items-center justify-center max-sm:w-full">
                         <img src="/ermis.png" className="w-[300px] h-[300px] max-sm:w-[150px] max-sm:h-[150px]" />
@@ -288,7 +288,7 @@ export default function Projects() {
                     </svg>
                 </div>
 
-                <div className="flex flex-row w-full py-[100px] bg-black max-sm:flex-col">
+                <div className="flex flex-row w-full py-[100px] bg-black max-sm:flex-col" id="project_heron">
 
                     <div className="flex flex-col w-1/2 items-center justify-center max-sm:w-full">
                         <p className="max-w-xl text-xl text-justify p-5 text-white"> The Heron subteam, part of the Hephaestus team, focuses on automation and control engineering, starting with the utilization of PLCs (Programmable Logic Controllers) for developing automation applications. Our initial goal is to optimize systems, enhance efficiency, and ensure precision, while planning to expand our expertise in the future by incorporating new technologies and methods for comprehensive and innovative solutions.</p>

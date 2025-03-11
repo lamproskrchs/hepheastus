@@ -29,6 +29,7 @@ import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import ChevronDownIcon from "@heroicons/react/24/solid/ChevronDownIcon";
 import { FloatingNav } from "@/components/ui/floating-navbar";
+import { it } from "node:test";
 
 export default function Home() {
   function classNames(...classes: any[]) {
@@ -79,25 +80,36 @@ export default function Home() {
       title: "Project Hermes",
       description: "All about rockets",
       header: <Skeleton />,
+      link : "/projects#project_hermes",
       icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
     },
     {
       title: "Project Athena",
       description: "Campus build by stuents, for students",
       header: <Skeleton />,
+      link : "/projects#project_athena",
+      icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+    },
+    {
+      title: "Project Heron",
+      description: "In for automation and control ?",
+      header: <Skeleton />,
+      link : "/projects#project_heron",
       icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
     },
     {
       title: "Project Zephyros",
       description: "What's the weather in the place of innovaiton ?",
       header: <Skeleton />,
+      link : "/projects#project_zephyros",
       icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
     },
     {
       title: "Lean more about the projects",
       description:
-        "Hephaestus has a various of on going projects. Click projects to see all of them",
+        "Hephaestus has a various of on going projects. Click here or projects to see all of them",
       header: <Skeleton />,
+      link : "/projects",
       icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
     },
   ];
@@ -345,6 +357,7 @@ export default function Home() {
               description={item.description}
               header={item.header}
               icon={item.icon}
+              link={item.link}
               className={i === 3 || i === 6 ? "md:col-span-2" : ""}
             />
           ))}

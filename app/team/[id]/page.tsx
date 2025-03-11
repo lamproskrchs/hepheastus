@@ -82,15 +82,6 @@ const Teamate: React.FC = () => {
             description: "Christos RampaVilas is an undergraduate student in the Department of Electrical and Computer Engineering at the University of Peloponnese. His research interests focus on integrated circuit design, computer architecture, FPGA board programming, embedded systems design and applications for automation, and hardware design for embedded systems.",
         },
         {
-            id: "yiannis_tokmakidis",
-            name: "Yiannis Tokmakidis",
-            photo: "/boy.png",
-            head: "Social Media management",
-            cv_file: "yiannis_tokmakidis.pdf",
-            school: "/ece.png",
-            description: "Giannis Tokmakidis is a 20-year-old undergraduate student in the Department of Electrical and Computer Engineering, where he also works as a researcher in the department's laboratory. He is passionate about science and fascinated by its applications across various fields. In his free time, Giannis enjoys playing the guitar and exploring photography. He has been a member of Hephaestus since April 2024. His research interests include computational electrodynamics and the mechanics of electrotechnical materials.",
-        },
-        {
             id: "fillipos_stamos",
             name: "Fillipos Stamos",
             photo: "/boy.png",
