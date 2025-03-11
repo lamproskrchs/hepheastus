@@ -340,7 +340,7 @@ export default function Team() {
                                 </div>
                                 <div className="text content">
                                     <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
-                                        Head of Aerodynamics/ Project Hermes
+                                        Finance and Recourses/Head of Hermes
                                     </h1>
 
                                 </div>
