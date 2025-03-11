@@ -353,7 +353,7 @@ export default function Team() {
                             <div
                                 className={cn(
                                     " cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4 hover:shadow-2xl hover:shadow-white",
-                                    " bg-[url(/civilc.png   )] bg-cover"
+                                    " bg-[url(/civilc.png)] bg-cover"
                                 )}
                             >
 
