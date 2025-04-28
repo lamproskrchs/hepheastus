@@ -16,11 +16,20 @@ const Teamate: React.FC = () => {
 
     const id = params.id; // Dynamic segment from the route
 
-    const IconMap = {
-        IconBriefcase,
-        IconSchool,
-        IconTools,
-        IconUser,
+    // Define a type for your icon map
+    type IconMapType = {
+        IconBriefcase: React.ComponentType<any>;
+        IconSchool: React.ComponentType<any>;
+        IconTools: React.ComponentType<any>;
+        IconUser: React.ComponentType<any>;
+    };
+
+    // Create the icon map with explicit type
+    const IconMap: IconMapType = {
+        IconBriefcase: IconBriefcase,
+        IconSchool: IconSchool,
+        IconTools: IconTools,
+        IconUser: IconUser,
     };
 
     const navItems = [
@@ -314,17 +323,21 @@ const Teamate: React.FC = () => {
                         {/* Sections */}
                         <div className="space-y-6 divide-y divide-gray-600">
                             {student.resume.map((sec, i) => {
-                                const IconC = IconMap[sec.icon] || (() => null);
+                                // Add type assertion for valid icon keys
+                                const iconKey = sec.icon as keyof typeof IconMap;
+                                const IconComponent = IconMap[iconKey] || (() => null);
+
                                 return (
-                                    <div
-                                        key={i}
-                                        className="pt-6"
-                                    >
+                                    <div key={i} className="pt-6">
                                         <div className="flex items-center space-x-4">
-                                            <IconC className="h-6 w-6 text-indigo-300 flex-shrink-0" />
-                                            <h3 className="text-2xl font-semibold text-white">{sec.section_title}</h3>
+                                            <IconComponent className="h-6 w-6 text-indigo-300 flex-shrink-0" />
+                                            <h3 className="text-2xl font-semibold text-white">
+                                                {sec.section_title}
+                                            </h3>
                                         </div>
-                                        <p className="mt-2 text-gray-300 leading-relaxed">{sec.description}</p>
+                                        <p className="mt-2 text-gray-300 leading-relaxed">
+                                            {sec.description}
+                                        </p>
                                     </div>
                                 );
                             })}
