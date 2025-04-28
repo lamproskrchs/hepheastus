@@ -32,11 +32,6 @@ export default function Projects() {
             link: "/contact",
             icon: <IconRecordMail className="h-4 w-4 text-neutral-500 dark:text-white" />,
         },
-        {
-            name: "Blog",
-            link: "/blog",
-            icon: <IconNews className="h-4 w-4 text-neutral-500 dark:text-white" />,
-        },
     ];
 
     function classNames(...classes: any[]) {
@@ -64,9 +59,6 @@ export default function Projects() {
                             </a>
                             <a href="/contact" className="cursor-pointer hover:text-shadow-[0_4px_8px_#FFFFFF] hover:text-white p-2">
                                 Contact us
-                            </a>
-                            <a href="/blog" className="cursor-pointer hover:text-shadow-[0_4px_8px_#FFFFFF] hover:text-white p-2">
-                                Blog
                             </a>
                         </div>
                     </div>
@@ -152,20 +144,6 @@ export default function Projects() {
                                                 )}
                                             >
                                                 Contact us
-                                            </a>
-                                        )}
-                                    </Menu.Item>
-
-                                    <Menu.Item>
-                                        {({ active }) => (
-                                            <a
-                                                href="/blog"
-                                                className={classNames(
-                                                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                                                    "block px-4 py-2 text-sm"
-                                                )}
-                                            >
-                                                Blog
                                             </a>
                                         )}
                                     </Menu.Item>
@@ -300,18 +278,24 @@ export default function Projects() {
 
                 </div>
 
-                <div className="flex flex-col pt-[100px] pb-[10px] space-y-7 items-center text-white text-lg ">
-                    <div className="flex flex-row w-[200px] h-[5px] rounded-full bg-white shadow-2xl shadow-white"></div>
-                    <p className="max-sm:text-sm">
-                        This site is open source ! You can find on{" "}
-                        <a target="_blank" className=" text-gray-400" href="https://github.com/xartokoptiko/hepheastus">
-                            Github
-                        </a>
-                    </p>
-                    <p className="text-sm mb-[10px] max-sm:text-xs">
-                        all rights reserved heaphestus.vercel.app© 2024
-                    </p>
-                </div>
+                {/* Footer */}
+                <footer className="py-8 text-center text-gray-500 text-sm">
+                    <div className="max-w-md mx-auto px-6">
+                        <div className="h-0.5 w-24 mx-auto bg-gray-600 mb-4" />
+                        <p>
+                            This site is open source! Find it on&nbsp;
+                            <a
+                                href="https://github.com/xartokoptiko/hepheastus"
+                                target="_blank"
+                                className="text-indigo-300 hover:text-indigo-200"
+                                rel="noopener noreferrer"
+                            >
+                                GitHub
+                            </a>.
+                        </p>
+                        <p className="mt-2">© 2024 hephaestus.vercel.app — All rights reserved.</p>
+                    </div>
+                </footer>
 
             </main>
         </>
