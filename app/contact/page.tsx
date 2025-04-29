@@ -47,10 +47,10 @@ function classNames(...classes: any[]) {
 }
 
 const socialLinks: SocialLink[] = [
-    { alt: "Instagram", src: "/social/instagram-logo-banner.avif", href: "#" },
+    { alt: "Instagram", src: "/social/instagram.png", href: "#" },
     { alt: "LinkedIn", src: "/social/link.png", href: "#" },
     { alt: "GitHub", src: "/social/git.png", href: "#" },
-    { alt: "Facebook", src: "/social/face.jpg", href: "#" },
+    { alt: "Facebook", src: "/social/facebook.png", href: "#" },
 ];
 
 const ContactPage: FC = () => {

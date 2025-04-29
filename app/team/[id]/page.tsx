@@ -55,48 +55,45 @@ const Teamate: React.FC = () => {
         },
     ];
 
-    const supervising_students =
-        [{
+    const supervising_students = [
+        {
             id: "fotis_rentzis",
             name: "Fotis Rentzis",
-            head: "Team director",
+            head: "Team Director",
             photoUrl: "/boy.png",
             departmentImageUrl: "/ece.png",
-            small_description: "s=ome text blah blah blah",
+            small_description: "Electrical & Computer Engineering student with strong experience in embedded systems, robotics, and digital technologies.",
             resume: [
                 {
                     section_title: "Education",
                     icon: "IconSchool",
-                    description: "Student on Electrical & Computer engineering | University of peloponnese"
+                    description: "Undergraduate student in Electrical & Computer Engineering | University of Peloponnese"
                 },
                 {
-                    section_title: "Experience & skills",
+                    section_title: "Technical Skills & Knowledge",
                     icon: "IconTools",
-                    description: "Integrated Circuit Design, Computer Architecture, Programming of FPGA boards, Arduino, Raspberry Pi, Applications and Design of Embedded Systems for Automation, Hardware Design for Embedded Systems, Basic Knowledge of Telecommunications Systems, Microprocessor and Microelectronics Applications, Presentation – Public Speaking, Programming in C, Python, Smart Cities (eGovernment, Open Data), Internet of Things (IoT) Technologies and Services, Renewable Energy Sources (RES)."
+                    description: "Integrated Circuit Design, Computer Architecture, FPGA Programming, Arduino, Raspberry Pi, Embedded Systems Design for Automation, Hardware Development for Embedded Platforms, Telecommunications Fundamentals, Microprocessor and Microelectronics Applications, C and Python Programming, Smart Cities (eGovernment, Open Data), Internet of Things (IoT), Renewable Energy Sources (RES), Public Speaking."
                 },
                 {
-                    section_title: "Participated in",
+                    section_title: "Seminars & Camps",
+                    icon: "IconSchool",
+                    description: "Career Guidance Program: 'Robotics and Digital Creation' (2015–2016) by the Network for Innovation and Creativity in the School of the Future, under KESYP Patras. Diploma recipient in 'Robotics and Digital Creation' (2017–2018). Participant at the WRO Teacher Camp 2019, OTE Academy, Athens."
+                },
+                {
+                    section_title: "Competitions & Projects",
                     icon: "IconBriefcase",
-                    description: `Career Guidance Program on the topic: 'Robotics and Digital Creation' by the Network 'Innovation and Creativity in the School of the Future' during the 2015–2016 school year, under the auspices of the Career Counseling Center (KESYP) of Patras.\n 
-                    Program 'Robotics and Digital Creation 2017–2018', receiving a diploma.\n
-                    Student Festival of Digital Creativity with the project 'Harnessing Underwater Currents'.\n
-                    1st Patras IQ Technology Transfer Exhibition.\n
-                    7th Regional Development Conference held at Achaia Clauss from September 19–21, 2019.\n
-                    WRO Teacher Camp 2019, held from September 21–22, 2019, at OTE Academy in Athens.\n
-                    Certificate of Participation in the World Robot Olympiad 2019 International Final in Hungary.\n
-                    `
+                    description: "World Robot Olympiad 2019 – International Final in Hungary (Certificate of Participation). Student Festival of Digital Creativity – Project: 'Harnessing Underwater Currents'. Exhibitor at the 1st Patras IQ Technology Transfer Exhibition. Member of the 7th Regional Development Conference (Achaia Clauss, September 2019)."
                 },
                 {
-                    section_title: "Speaker",
-                    icon: "IconUser",
-                    description: `Key speaker at a certification seminar organized by the Hellenic Society for Neurosciences on the topic: Artificial Intelligence. \n
-                    Student Festival of Digital Creativity organized by the Ministry of Education on April 11, 2019.`
+                    section_title: "Speaking Engagements",
+                    icon: "IconBriefcase",
+                    description: "Key speaker at a certification seminar organized by the Hellenic Society for Neurosciences on Artificial Intelligence. Speaker at the Student Festival of Digital Creativity organized by the Ministry of Education (April 11, 2019)."
                 },
                 {
                     section_title: "Languages",
                     icon: "IconUser",
-                    description: "English (Native), Spanish (Fluent), German (Conversational)."
-                },
+                    description: "Greek (native), English (fluent)"
+                }
             ]
         },
 
@@ -227,7 +224,7 @@ const Teamate: React.FC = () => {
             name: "Panagiotis Diamantis",
             head: "Head of Project Athena",
             photoUrl: "/boy.png",
-            departmentImageUrl: "/civil.jpg",
+            departmentImageUrl: "/civil.png",
             small_description: "Civil Engineering Student, Autocad Designer, Seminar Participant",
             resume: [
                 {
@@ -335,7 +332,7 @@ const Teamate: React.FC = () => {
 
 
 
-        ]
+    ]
 
     const student = supervising_students.find((s) => s.id === id);
 
