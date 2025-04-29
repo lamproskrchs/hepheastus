@@ -47,10 +47,9 @@ function classNames(...classes: any[]) {
 }
 
 const socialLinks: SocialLink[] = [
-    { alt: "Instagram", src: "/social/instagram.png", href: "#" },
+    { alt: "Instagram", src: "/social/instagram.png", href: "https://www.instagram.com/hephaestus_uop" },
     { alt: "LinkedIn", src: "/social/link.png", href: "#" },
-    { alt: "GitHub", src: "/social/git.png", href: "#" },
-    { alt: "Facebook", src: "/social/facebook.png", href: "#" },
+    { alt: "GitHub", src: "/social/git.png", href: "https://github.com/hyphestusrobotics" },
 ];
 
 const ContactPage: FC = () => {
@@ -209,11 +208,12 @@ const ContactPage: FC = () => {
             </section>
 
             {/* Social Grid – plain <img>, fixed sizes */}
-            <section className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-6 pb-16">
+            <section className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6 pb-16">
               {socialLinks.map(({ alt, src, href }) => (
                 <a
                   key={alt}
                   href={href}
+                  target="_blank"
                   className="
                     group
                     flex flex-col
