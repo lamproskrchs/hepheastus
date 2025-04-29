@@ -493,7 +493,7 @@ const Teamate: React.FC = () => {
                 </Menu>
             </div>
 
-            <section className="mx-4 md:mx-10 py-12 h-full">
+            <section className="mx-4 md:mx-10 py-12 h-full overflow-y-scroll">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
                     {/* IMAGES */}
                     <div
@@ -551,26 +551,6 @@ const Teamate: React.FC = () => {
                     </div>
                 </div>
             </section>
-
-
-            {/* Footer */}
-            <footer className="py-8 text-center text-gray-500 text-sm">
-                <div className="max-w-md mx-auto px-6">
-                    <div className="h-0.5 w-24 mx-auto bg-gray-600 mb-4" />
-                    <p>
-                        This site is open source! Find it on&nbsp;
-                        <a
-                            href="https://github.com/xartokoptiko/hepheastus"
-                            target="_blank"
-                            className="text-indigo-300 hover:text-indigo-200"
-                            rel="noopener noreferrer"
-                        >
-                            GitHub
-                        </a>.
-                    </p>
-                    <p className="mt-2">© 2024 hephaestus.vercel.app — All rights reserved.</p>
-                </div>
-            </footer>
         </main>
 
     );
