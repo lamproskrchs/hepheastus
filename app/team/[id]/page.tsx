@@ -58,77 +58,283 @@ const Teamate: React.FC = () => {
     const supervising_students =
         [{
             id: "fotis_rentzis",
-            name: "Jane Doe",
-            head: "Senior Software Engineer",
+            name: "Fotis Rentzis",
+            head: "Team director",
             photoUrl: "/boy.png",
             departmentImageUrl: "/ece.png",
-            small_description: "Passionate engineer with 10+ years of full-stack web development experience.",
+            small_description: "s=ome text blah blah blah",
             resume: [
-                {
-                    section_title: "Professional Summary",
-                    icon: "IconBriefcase",
-                    description: "A driven and detail-oriented Senior Software Engineer with expertise in designing scalable web applications and leading development teams to success."
-                },
-                {
-                    section_title: "Experience",
-                    icon: "IconBriefcase",
-                    description: `
-      - **Acme Corp** (2020 - Present): Lead engineer for the e-commerce platform, architected microservices, and improved performance by 40%.
-      - **XYZ Inc** (2016 - 2020): Full-stack developer on customer portal, implemented real-time features and CI/CD pipelines.
-      - **Startup Co** (2014 - 2016): Junior developer, built REST APIs and integrated third-party services.
-            `
-                },
                 {
                     section_title: "Education",
                     icon: "IconSchool",
-                    description: `
-      - M.S. in Computer Science, University of Technology, 2014 - 2016
-      - B.S. in Software Engineering, State University, 2010 - 2014
-            `
+                    description: "Student on Electrical & Computer engineering | University of peloponnese"
                 },
                 {
-                    section_title: "Skills",
+                    section_title: "Experience & skills",
                     icon: "IconTools",
-                    description: "JavaScript, TypeScript, React, Next.js, Node.js, Python, SQL, Docker, AWS, Kubernetes, GraphQL, REST API design, Agile/Scrum."
+                    description: "Integrated Circuit Design, Computer Architecture, Programming of FPGA boards, Arduino, Raspberry Pi, Applications and Design of Embedded Systems for Automation, Hardware Design for Embedded Systems, Basic Knowledge of Telecommunications Systems, Microprocessor and Microelectronics Applications, Presentation – Public Speaking, Programming in C, Python, Smart Cities (eGovernment, Open Data), Internet of Things (IoT) Technologies and Services, Renewable Energy Sources (RES)."
                 },
                 {
-                    section_title: "Certifications",
+                    section_title: "Participated in",
                     icon: "IconBriefcase",
-                    description: `
-      - AWS Certified Solutions Architect
-      - Certified Scrum Master
-      - Google Cloud Professional Cloud Architect
-            `
+                    description: `Career Guidance Program on the topic: 'Robotics and Digital Creation' by the Network 'Innovation and Creativity in the School of the Future' during the 2015–2016 school year, under the auspices of the Career Counseling Center (KESYP) of Patras.\n 
+                    Program 'Robotics and Digital Creation 2017–2018', receiving a diploma.\n
+                    Student Festival of Digital Creativity with the project 'Harnessing Underwater Currents'.\n
+                    1st Patras IQ Technology Transfer Exhibition.\n
+                    7th Regional Development Conference held at Achaia Clauss from September 19–21, 2019.\n
+                    WRO Teacher Camp 2019, held from September 21–22, 2019, at OTE Academy in Athens.\n
+                    Certificate of Participation in the World Robot Olympiad 2019 International Final in Hungary.\n
+                    `
                 },
                 {
-                    section_title: "Projects",
-                    icon: "IconBriefcase",
-                    description: `
-      - **Open Source Contributor**: Improved performance of 'XYZ' library by refactoring core modules.
-      - **ProdTracker App**: Built a productivity tracking app with Next.js, Tailwind CSS, and Firebase.
-      - **DataViz Dashboard**: Created interactive dashboards using React and D3.js.
-            `
-                },
-                {
-                    section_title: "Publications",
-                    icon: "IconBriefcase",
-                    description: `
-      - "Optimizing React Performance" on Medium, 2023
-      - Co-authored "Microservices at Scale" published in Tech Journal, 2022
-            `
-                },
-                {
-                    section_title: "Volunteer Experience",
+                    section_title: "Speaker",
                     icon: "IconUser",
-                    description: "Mentor at Code for Good (2019 - Present); Speaker at local tech meetups on JavaScript best practices."
+                    description: `Key speaker at a certification seminar organized by the Hellenic Society for Neurosciences on the topic: Artificial Intelligence. \n
+                    Student Festival of Digital Creativity organized by the Ministry of Education on April 11, 2019.`
                 },
                 {
                     section_title: "Languages",
                     icon: "IconUser",
                     description: "English (Native), Spanish (Fluent), German (Conversational)."
+                },
+            ]
+        },
+
+
+        {
+            id: "lampros_karachristos",
+            name: "Lampros Karachristos",
+            head: "Head of informatics",
+            photoUrl: "/boy.png",
+            departmentImageUrl: "/ece.png",
+            small_description: "Software Engineer, Full stack developer , junior-mid Developer",
+            resume: [
+                {
+                    section_title: "Education",
+                    icon: "IconSchool",
+                    description: "Student on Electrical & Computer engineering | University of peloponnese"
+                },
+                {
+                    section_title: "Current position : Full-stack web developer at Novidea 2024 - today ",
+                    icon: "IconBriefcase",
+                    description: `Full Stack Web Developer specializing in creating POS management services that automate routine tasks, enabling technicians to focus on delivering top-quality results. With expertise in both front-end and back-end development, I design seamless, high-performance systems that enhance efficiency and ensure fast processing speeds. My solutions help businesses streamline operations, reduce human error, and improve overall productivity. By leveraging modern web technologies, I strive to provide scalable, user-friendly applications that support growth and innovation while meeting the ever-evolving needs of the industry.`
+                },
+                {
+                    section_title: "Android Developer 2021-2022 (Ad-hoc outsourcer)",
+                    icon: "IconBriefcase",
+                    description: `Created Management android applications for companies to track issues on their
+                    products around Greece and create the most suitable communication environment
+                    for their workers.
+                    This boosted the companies reaction speed for their costumers`
+                },
+                {
+                    section_title: "Full-stack web developer 2022-2024 (Ad-hoc outsoucer)",
+                    icon: "IconBriefcase",
+                    description: `Created Management android applications for companies to track issues on their
+                    products around Greece and create the most suitable communication environment
+                    for their workers.
+                    This boosted the companies reaction speed for their costumers.
+                    For the android applications to have the maximum performance they need the
+                    best back-end . During those 2 years i achieved creating server-side servers
+                    with the kotlin programming language and the Quarkus framework that can
+                    stand multiple requests per second handling a lot of data, therefore having the
+                    application running on maximum speed.
+                    Created web applications (front-end )for a quick visit on the workers app if
+                    they couldn't access, for various reasons, their mobile app.
+                    Created web applications (front-end) for the companies to manage the data of
+                    those applications and track the issues as long as their workers during their
+                    working hours
+                    `
+                },
+                {
+                    section_title: "Volunteer at Lifechain - 2023-2024",
+                    icon: "IconUser",
+                    description: `Lifechain was a team that created a safety app for universities.`
+                },
+                {
+                    section_title: "Skills",
+                    icon: "IconTools",
+                    description: `Java(very good), Kotlin(expert)
+                    HTML(Very good), CSS(good), Tailwind
+                    CSS(very good), JavaScript(very good),
+                    Typescript(good)
+                    Python(Very good)
+                    Next.js(Very good), SpringBoot(Very good),
+                    Quarkus(Good), ReactNative(Good)
+                    PostgreSQL(Good)`
+                },
+                {
+                    section_title: "Languages",
+                    icon: "IconUser",
+                    description: "English (Fluent), Greek (native)"
+                },
+            ]
+        },
+
+        {
+            id: "fillipos_stamos",
+            name: "Fillipos Stamos",
+            head: "Head of aerodynamics/ Project Hermes",
+            photoUrl: "/boy.png",
+            departmentImageUrl: "/mech.png",
+            small_description: "Mechanical Engineering Student, Robotics Enthusiast, Team Leader, Technical Director",
+            resume: [
+                {
+                    section_title: "Education",
+                    icon: "IconSchool",
+                    description: "Mechanical Engineering Student | University of Peloponnese"
+                },
+                {
+                    section_title: "Formula Student - Minautor Racing Team",
+                    icon: "IconBriefcase",
+                    description: "Founder of the 'Minautor Racing' Formula Student team. Technical Director for a short period, currently leading the aerodynamics and cooling subgroup. Our goal is to optimize car performance throughout its journey, from engine cooling to cornering grip for better lap times."
+                },
+                {
+                    section_title: "Project Hermes - Rocket Engineering",
+                    icon: "IconBriefcase",
+                    description: "Team Director of Project Hermes, responsible for aerodynamics. We are developing a rocket to participate in the Czech Rocket Challenge, aiming to reach an altitude of 1 kilometer."
+                },
+                {
+                    section_title: "SimUoPLabs - Student Research Group",
+                    icon: "IconBriefcase",
+                    description: "Leader of SimUoPLabs, a student research group at the University of Peloponnese. We specialize in static and fluid dynamics analyses for engineering applications."
+                },
+                {
+                    section_title: "Experience in Digital Media and Production",
+                    icon: "IconBriefcase",
+                    description: "Created an internet radio station at 2nd Lyceum of Koropi and produced podcasts, acting as both producer and technician. Additionally, I have experience in sound engineering, lighting design, and music instrument performances."
+                },
+                {
+                    section_title: "F1 in Schools Participation",
+                    icon: "IconBriefcase",
+                    description: "Participated in the F1 in Schools competition as part of the Bluearrowgr team during middle and high school at the Gymnasium and Lyceum of Vouliagmeni."
+                },
+                {
+                    section_title: "Skills",
+                    icon: "IconTools",
+                    description: "Mechanical Engineering, Technical Direction, Aerodynamics, Fluid Dynamics, Project Management, Team Leadership, Robotics"
+                },
+                {
+                    section_title: "Languages",
+                    icon: "IconUser",
+                    description: "Greek (native), English (fluent)"
                 }
             ]
         },
+
+        {
+            id: "panagiotis_diamantis",
+            name: "Panagiotis Diamantis",
+            head: "Head of Project Athena",
+            photoUrl: "/boy.png",
+            departmentImageUrl: "/civil.jpg",
+            small_description: "Civil Engineering Student, Autocad Designer, Seminar Participant",
+            resume: [
+                {
+                    section_title: "Education",
+                    icon: "IconTools",
+                    description: "Civil Engineering Student | University of Peloponnese"
+                },
+                {
+                    section_title: "Professional Experience",
+                    icon: "IconBriefcase",
+                    description: "Assistant to a Civil Engineer, responsible for producing professional architectural designs, performing on-site surveys, and attending professional meetings."
+                },
+                {
+                    section_title: "Seminars",
+                    icon: "IconSchool",
+                    description: "Attended a seminar on new materials in 2018. Participated in a lecture titled 'Protection of Structures from Natural Disasters' by internationally recognized professors Andreas Langousis and Stefanos Dritsos."
+                },
+                {
+                    section_title: "Interests",
+                    icon: "IconTools",
+                    description: "Autocad Design, Smart Campus, Supporting tasks across various technical fields"
+                },
+                {
+                    section_title: "Languages",
+                    icon: "IconUser",
+                    description: "Greek (native), English (fluent)"
+                }
+            ]
+        },
+
+
+        {
+            id: "christos_rompovilas",
+            name: "Christos Rampavilas",
+            head: "Head of Micro-electronics reasearch/ Project Zephyros",
+            photoUrl: "/boy.png",
+            departmentImageUrl: "/ece.png",
+            small_description: "Embedded Systems Enthusiast, FPGA Programmer, Circuit Designer",
+            resume: [
+                {
+                    section_title: "Education",
+                    icon: "IconSchool",
+                    description: "Department of Electrical and Computer Engineering | University of Peloponnese"
+                },
+                {
+                    section_title: "Research Interests",
+                    icon: "IconTools",
+                    description: "Integrated Circuit Design, Computer Architecture, FPGA Board Programming, Embedded Systems Applications and Design for Automation, Hardware Design for Embedded Systems"
+                },
+                {
+                    section_title: "Languages",
+                    icon: "IconUser",
+                    description: "Greek (native), English (fluent)"
+                }
+            ]
+        },
+
+
+
+        {
+            id: "athanasios_daoulas",
+            name: "Athanassios Daoulas",
+            head: "Head of Hyron",
+            photoUrl: "/boy.png",
+            departmentImageUrl: "/ece.png",
+            small_description: "Electrical Systems Technician, Full-Time Electrician, Passionate Learner",
+            resume: [
+                {
+                    section_title: "Education",
+                    icon: "IconSchool",
+                    description: "Second-year student at the School of Engineering, Department of Electrical and Computer Engineering, University of Peloponnese. Graduate of the 1st Vocational High School of Haidari with honors and awards. Degree in Electrical Systems, Installations, and Networks."
+                },
+                {
+                    section_title: "Certifications",
+                    icon: "IconBriefcase",
+                    description: "Professional electrician licenses A, C, D, and F specialty. Holder of ECDL certification in basic computer skills. English language certificate: ESB B2 (Lower)."
+                },
+                {
+                    section_title: "Professional Experience",
+                    icon: IconBriefcase,
+                    description: "Full-time electrician specializing in internal electrical installations."
+                },
+                {
+                    section_title: "Research Interests",
+                    icon: "IconTools",
+                    description: "Renewable energy sources, Electronics, Automation & PLC Programming, Electrical Design, Internal Electrical Installations."
+                },
+                {
+                    section_title: "Technical Skills",
+                    icon: "IconTools",
+                    description: "Internal Electrical Installations, Automation Systems"
+                },
+                {
+                    section_title: "Social Skills",
+                    icon: "IconUser",
+                    description: "Strong communication skills, High motivation"
+                },
+                {
+                    section_title: "Languages",
+                    icon: "IconUser",
+                    description: "Greek (native), English (very good)"
+                },
+            ]
+        }
+
+
+
         ]
 
     const student = supervising_students.find((s) => s.id === id);
@@ -143,7 +349,7 @@ const Teamate: React.FC = () => {
 
     return (
 
-        <main className="flex flex-col w-full h-full bg-gradient-to-br to-black_end from-lightblack via-90%">
+        <main className="flex flex-col w-full h-screen overflow-y-scroll bg-gradient-to-br to-black_end from-lightblack via-90%">
             <div className="relative  w-full">
                 <FloatingNav navItems={navItems} />
             </div>
@@ -287,7 +493,7 @@ const Teamate: React.FC = () => {
                 </Menu>
             </div>
 
-            <section className="mx-4 md:mx-10 py-12">
+            <section className="mx-4 md:mx-10 py-12 h-full">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
                     {/* IMAGES */}
                     <div
